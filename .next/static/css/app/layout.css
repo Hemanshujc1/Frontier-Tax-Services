@@ -1350,9 +1350,13 @@ h6 {
     }
 
     .our-team {
+        height: auto;
         width: 97.95vw;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
+        overflow: auto;
+        flex-direction: row;
     }
 
     .teamcard {

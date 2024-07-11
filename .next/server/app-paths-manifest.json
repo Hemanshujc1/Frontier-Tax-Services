@@ -1,5 +1,5 @@
 {
-  "/Home/page": "app/Home/page.js",
-  "/Expertise/page": "app/Expertise/page.js",
+  "/page": "app/page.js",
+  "/Aboutus/page": "app/Aboutus/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js"
 }
