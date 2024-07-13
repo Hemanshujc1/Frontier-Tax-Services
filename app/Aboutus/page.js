@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 import CountUp from "react-countup";
 import Image from "next/image";
 
-const AnimatedNumber = ({ end, duration }) => {
+const AnimatedNumber = ({ end, duration, suffix }) => {
   const [startAnimation, setStartAnimation] = useState(false);
   const { ref, inView } = useInView({
     triggerOnce: true, // Trigger animation only once
@@ -22,7 +22,7 @@ const AnimatedNumber = ({ end, duration }) => {
         <CountUp
           end={end}
           duration={duration}
-          suffix="%"
+          suffix={suffix}
           start={startAnimation ? null : 0}
         />
       </h3>
@@ -35,22 +35,22 @@ const MyComponent = () => {
     <div className="slide h-[30vh] flex gap-20 justify-center items-center text-center text-yellow-800">
       <div className="slide1">
         <h2>Increased Savings</h2>
-        <AnimatedNumber end={70} duration={2} />
+        <AnimatedNumber end={70} duration={2} suffix="%" />
       </div>
       <div className="bg-white sep h-28 w-0.5"></div>
       <div className="slide2">
         <h2>Accounting Firms</h2>
-        <AnimatedNumber end={13} duration={2} />
+        <AnimatedNumber end={13} duration={2} suffix="+" />
       </div>
       <div className="bg-white sep h-28 w-0.5"></div>
       <div className="slide3">
         <h2>Employees</h2>
-        <AnimatedNumber end={5} duration={2} />
+        <AnimatedNumber end={5} duration={2} suffix="+" />
       </div>
       <div className="bg-white sep h-28 w-0.5"></div>
       <div className="slide4">
         <h2>Years of Experience</h2>
-        <AnimatedNumber end={3} duration={2} />
+        <AnimatedNumber end={3} duration={2} suffix="+" />
       </div>
     </div>
   );
