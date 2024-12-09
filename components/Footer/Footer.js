@@ -35,8 +35,8 @@ const Footer = () => {
           {/* <Link href="/Home">
             <Image src="/twitter.gif" alt="Twitter" width={34} height={34} className="rounded-[100%]" unoptimized />
           </Link> */}
-          <Link href="/">
-            <Image src="/gmail.gif" alt="Gmail" width={34} height={34} className="rounded-[100%]" unoptimized />
+          <Link href="mailto:arpit.alice@gmail.com">
+            <Image src="/gmail.gif" alt="Gmail" width={34} height={34} className="rounded-[8px] cursor-pointer" unoptimized />
           </Link> 
           {/* <Link href="/Home">
             <Image src="/Linkendin.gif" alt="LinkedIn" width={34} height={34} className="rounded-[100%]" unoptimized />

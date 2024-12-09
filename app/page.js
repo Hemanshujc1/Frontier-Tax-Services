@@ -18,10 +18,10 @@ export default function Home() {
           </video>
         </div>
         <div className="text relative z-10 max-w-3xl text-center px-4">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-[#1b3462]">
             Assisting CPA Firms With Offshore Accounting Solutions
           </h2>
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-yellow-400">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-black">
             We provide comprehensive assistance, spanning from bookkeeping to
             advisory consultation, resulting in enhanced efficiency and reduced
             costs for your company.

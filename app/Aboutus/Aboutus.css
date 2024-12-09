@@ -5,8 +5,8 @@
 .teamcard {
   height: 58vh;
   width: 22vw;
-  background-color: rgba(0, 0, 0, 0.7);
-  border: 2px solid whitesmoke;
+  background-color: whitesmoke;
+  border: 2px solid blue;
   border-radius: 5px;
   display: flex;
   flex-direction: column;

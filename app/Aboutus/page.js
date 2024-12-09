@@ -33,25 +33,25 @@ const AnimatedNumber = ({ end, duration, suffix }) => {
 
 const MyComponent = () => {
   return (
-    <div className="slide h-[30vh] flex gap-20 justify-center items-center text-center text-yellow-800">
+    <div className="slide h-[30vh] flex gap-20 justify-center items-center text-center font-bold text-[#1b3462]">
       <div className="slide1">
         <h2>Increased Savings</h2>
-        <AnimatedNumber end={70} duration={2} />
+        <AnimatedNumber end={70} duration={2} suffix={"%"} />
       </div>
       <div className="bg-white sep h-28 w-0.5"></div>
       <div className="slide2">
         <h2>Accounting Firms</h2>
-        <AnimatedNumber end={13} duration={2} />
+        <AnimatedNumber end={13} duration={2} suffix={"+"} />
       </div>
       <div className="bg-white sep h-28 w-0.5"></div>
       <div className="slide3">
         <h2>Employees</h2>
-        <AnimatedNumber end={5} duration={2} />
+        <AnimatedNumber end={5} duration={2} suffix={"+"} />
       </div>
       <div className="bg-white sep h-28 w-0.5"></div>
       <div className="slide4">
         <h2>Years of Experience</h2>
-        <AnimatedNumber end={3} duration={2} />
+        <AnimatedNumber end={3} duration={2} suffix={"+"} />
       </div> 
     </div>
   );
@@ -63,7 +63,7 @@ const Page = () => {
       <section className="section-1 relative h-screen flex flex-col items-center justify-center">
         <div className="video-container absolute inset-0 overflow-hidden">
           <video
-            className="min-w-full min-h-full w-auto h-auto absolute opacity-15 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover"
+            className="min-w-full min-h-full w-auto h-auto absolute opacity-[0.4] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover"
             autoPlay
             muted
             playsInline
@@ -74,10 +74,10 @@ const Page = () => {
           </video>
         </div>
         <div className="text relative z-10 max-w-3xl text-center px-4">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-[#1b3462]">
             About Us
           </h2>
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-yellow-400">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-black">
             We provide comprehensive assistance, spanning from bookkeeping to
             advisory consultation, resulting in enhanced efficiency and reduced
             costs for your company.
@@ -92,7 +92,7 @@ const Page = () => {
       <div className="newbox h-[80vh] flex justify-center items-center">
         <div className="howcanhelpyou w-[90vw] flex justify-center align-center items-center gap-6">
           <div className="heading">
-            <h1 className="text-center text-3xl font-bold">
+            <h1 className="text-center text-3xl font-bold text-[#1b3462]">
               How we can help you get ahead ?
             </h1>
           </div>
@@ -115,7 +115,7 @@ const Page = () => {
               with a profitable margin?”
             </p>
             <p className="p-2">By partnering with us, you can observe:</p>
-            <ul className="text-[#ff6600]">
+            <ul className="text-[#3c7920]">
               <li>-Best accounting and bookkeeping practices</li>
               <li>-High operational efficiency</li>
               <li>-Enhance client’s deliverables</li>
@@ -128,7 +128,7 @@ const Page = () => {
       </div>
       <div className="bg-white opacity-15 h-1"></div>
       <div className="our-team h-[150vh] flex flex-col items-center">
-        <h2 className="text-center text-4xl font-bold mt-8">Our Team</h2>
+        <h2 className="text-center text-4xl font-bold mt-8 text-[#1b3462]">Our Team</h2>
         {/* <TeamCarousel /> */}
         <div className="team flex flex-wrap items-center justify-center gap-8 mb-10 mt-10 h-[90vh] w-[80vw]">
           <div className="teamcard MEMBER-1">
