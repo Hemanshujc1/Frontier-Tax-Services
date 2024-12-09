@@ -1,0 +1,40 @@
+@media (max-width: 1023px) {
+  .footer {
+    flex-direction: row;
+    padding: 14px;
+    height: 36vh;
+    font-size: small;
+    text-align: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    /* margin-top: 20px; */
+  }
+
+  .footersection1 {
+    text-align: center;
+    gap: 5px;
+  }
+
+  .footersection1 h2 {
+    font-size: medium;
+  }
+  .footer .box {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 14px;
+  }
+  .footersection3 img {
+    height: 35px;
+    width: 35px;
+
+  }
+}
+
+@media (min-width: 1024px) {
+    .box {
+        width: 40vw;
+    }
+
+}

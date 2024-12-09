@@ -1,32 +1,41 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { submitAction } from "@/actions/Client";
+import "./Contactus.css";
+import useWeb3Forms from "@web3forms/react";
 
 const Page = () => {
-  const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm();
-  const [loading, setLoading] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm();
+  //new lines
 
-  const delay = (d) => {
-    return new Promise((resolve) => {
-      setTimeout(resolve, d * 1000);
-    });
-  };
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [result, setResult] = useState(null);
+  const accessKey = "d9090d0c-eb60-49b3-825b-c8a1981981f8";
 
-  const onSubmit = async (data) => {
-    setLoading(true);
-    await delay(2); // 2 seconds delay
-    const formData = new FormData();
-    formData.append("Name", data.Name);
-    formData.append("Email", data.Email);
-    formData.append("Number", data.Number);
-    formData.append("Subject", data.Subject);
-    formData.append("Message", data.Message);
+  const { submit: onSubmit } = useWeb3Forms({
 
-    await submitAction(formData);
-    setLoading(false);
-    reset();
-  };
+    access_key: accessKey,
+    settings: {
+      from_name: "Frontier Tax Services",
+      subject: "New Contact Message from your Website",
+      // ... other settings
+    },
+    onSuccess: (msg, data) => {
+      setIsSuccess(true);
+      setResult(msg);
+      reset();
+    },
+    onError: (msg, data) => {
+      setIsSuccess(false);
+      setResult(msg);
+    },
+  });
+  // the end
 
   return (
     <>
@@ -66,12 +75,10 @@ const Page = () => {
               type="text"
               placeholder="Name"
             />
-            {errors.Name && (
-              <div className="error">{errors.Name.message}</div>
-            )}
+            {errors.Name && <div className="error">{errors.Name.message}</div>}
 
             <input
-              {...register("Email", {
+              {...register("email", {
                 required: "This field is required",
               })}
               type="email"
@@ -120,15 +127,15 @@ const Page = () => {
             )}
             <div className="submit flex justify-center align-middle items-center gap-2">
               <input
-                disabled={isSubmitting || loading}
                 type="submit"
                 value="Message Us"
                 className=""
-              />
-              {loading && <div className="text-[#800017]">Submitting...</div>}
+              />        
+              <div>{result}</div>
             </div>
           </div>
         </form>
+
       </div>
     </>
   );

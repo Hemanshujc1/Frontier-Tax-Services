@@ -66,7 +66,7 @@ export default function Home() {
           </div>
         </div>
         <div className="box2 flex justify-center gap-5">
-          <div className="service service4">
+          {/* <div className="service service4">
             <Image src="/report.gif" alt="financial reporting" width={60} height={50} unoptimized />
             <div className="service-desc">
               <Link href="/Service">
@@ -77,7 +77,7 @@ export default function Home() {
                 support
               </p>
             </div>
-          </div>
+          </div> */}
           <div className="service service5">
             <Image src="/tax.gif" alt="tax preparation" width={60} height={50} unoptimized />
             <div className="service-desc">

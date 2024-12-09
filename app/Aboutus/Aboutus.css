@@ -1,0 +1,88 @@
+.howcanhelpyou {
+  flex-wrap: wrap;
+}
+
+.teamcard {
+  height: 58vh;
+  width: 22vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid whitesmoke;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+}
+.name p {
+  font-size: medium;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.carousel {
+  transform-style: preserve-3d;
+}
+
+.carousel-item {
+  backface-visibility: hidden;
+}
+
+@media (max-width: 1023px) {
+  /* About us page */
+  .experience {
+    height: 45vh;
+    width: 97.95vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slide {
+    height: 40vh;
+    width: 97.95vw;
+    flex-wrap: wrap;
+    font-size: larger;
+    overflow-y: auto;
+    gap: 20px;
+  }
+
+  .sep {
+    display: none;
+  }
+
+  .newbox {
+    width: 97.95vw;
+    flex-wrap: wrap;
+    font-size: medium;
+    overflow-y: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .howcanhelpyou {
+    font-size: small;
+    text-align: center;
+  }
+
+  .txt {
+    gap: 20px;
+  }
+
+  .our-team {
+    height: auto;
+    width: 97.95vw;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: auto;
+    flex-direction: row;
+  }
+
+  .teamcard {
+    height: 50vh;
+    width: 60vw;
+  }
+}

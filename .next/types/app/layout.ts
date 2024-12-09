@@ -1,4 +1,4 @@
-// File: C:\Users\91702\OneDrive\Desktop\HEMANSHU\coding\webdev\Frontier Tax Services\Frontier Tax Services\app\layout.js
+// File: C:\Users\91702\OneDrive\Desktop\HEMANSHU\coding\webdev\Frontier Tax Services - Copy\Frontier Tax Services\app\layout.js
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

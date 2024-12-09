@@ -1,0 +1,9 @@
+.para {
+    max-height: 60vh;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+.para.expanded {
+    max-height: 60vh;
+}
+  

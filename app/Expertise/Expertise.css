@@ -1,0 +1,33 @@
+.expertisecard {
+    /* background-color: teal; */
+    background-color: White;
+    color: black;
+    height: 210px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: x-large;
+    gap: 45px;
+    border: 4px solid red;
+    border-radius: 12px;
+}
+
+
+@media (max-width: 1023px) {
+    
+    /* Expertise page */
+    .expertise {
+        /* width: 97.95vw; */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cards {
+        width: 80vw;
+        flex-wrap: wrap;
+        overflow: auto;
+    }
+}
