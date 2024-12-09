@@ -2,34 +2,93 @@
 @tailwind components;
 @tailwind utilities;
 
-
+/* 
 * {
     margin: 0;
     padding: 0;
-    /* font-family: "Mukta", sans-serif;
-    font-weight: 400;
-    font-style: normal; */
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
     font-size: large;
-    /* font-style: italic;   */
-
+    font-family: "Wittgenstein", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: italic;
 }
-/* 
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    /* font-family: "Playwrite GB S", cursive;
+    font-family: "Playwrite GB S", cursive;
     font-optical-sizing: auto;
-    font-weight: 200; */
-    /* font-style: italic; */
-/* } */
+    font-weight: 200;
+    font-style: italic;
+} */
 
+/* Add arrow icon */
+.dropbtn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 
-/* Home.css */
+/* Navbar */
+/* Ensure your CSS file includes these styles */
+.sticky {
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* For the dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    /* background-color: rgb(240, 14, 14); */
+    color: whitesmoke;
+    min-width: 250px;
+    padding: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border: 2px solid red;
+    border-radius: 8px;
+    left: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.dropdown-content.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-content button {
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+    margin: 2px;
+    width: 100%;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content.adjust-left {
+    right: 0;
+    left: auto;
+}
+
+/* page.js css */
 .service {
     display: flex;
     width: 30vw;
@@ -117,15 +176,249 @@ h6 {
         overflow: auto;
         padding-bottom: 20px;
     }
-    
+
+    /* About us page */
+    .experience {
+        height: 45vh;
+        width: 97.95vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slide {
+        height: 40vh;
+        width: 97.95vw;
+        flex-wrap: wrap;
+        font-size: larger;
+        overflow-y: auto;
+        gap: 20px;
+    }
+
+    .sep {
+        display: none;
+    }
+
+    .newbox {
+        width: 97.95vw;
+        flex-wrap: wrap;
+        font-size: medium;
+        overflow-y: auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
+
+    }
+
+    .howcanhelpyou {
+        font-size: small;
+        text-align: center;
+    }
+
+    .txt {
+        gap: 20px;
+    }
+
+    .our-team {
+        height: auto;
+        width: 97.95vw;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        overflow: auto;
+        flex-direction: row;
+    }
+
+    .teamcard {
+        height: 50vh;
+        width: 60vw;
+    }
+
+    /* Expertise page */
+    .expertise {
+        /* width: 97.95vw; */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cards {
+        width: 80vw;
+        flex-wrap: wrap;
+        overflow: auto;
+    }
+
+    /* service page */
+    .servicecard {
+        height: auto;
+        width: 79vw;
+        border-radius: 9%;
+    }
+
+    /* contact page */
+    .section-2 {
+        width: 97.95vw;
+    }
+
+    .contact-form {
+        height: 95vh;
+        width: 85vw;
+        text-align: center;
+    }
+
+    .contact-form input {
+        width: 70vw;
+        flex-wrap: wrap;
+        font-size: small;
+    }
+
+    #Message {
+        height: 25vh;
+        width: 70vw;
+        font-size: small;
+    }
+
+    .contact-form .submit input {
+        width: 41vw;
+        padding: 1px;
+        margin-bottom: 5px;
+        flex-wrap: wrap;
+    }
+
+    /* footer */
+    .footer {
+        flex-direction: row;
+        padding: 14px;
+        height: 36vh;
+        font-size: small;
+        text-align: center;
+        flex-wrap: wrap;
+        overflow-y: auto;
+        /* margin-top: 20px; */
+    }
+
+    .footersection1 {
+        text-align: center;
+        gap: 5px;
+    }
+
+    .footersection1 h2 {
+        font-size: medium;
+    }
+
+    .footer .box {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 14px;
+    }
+
+    .footersection3 img {
+        height: 35px;
+        width: 35px;
+    }
+
 }
 
+@media (min-width: 1024px) {
 
+    /* navbar */
+    .mobile-menu-icon {
+        display: none;
+    }
 
+    .navbar ul {
+        flex-direction: row;
+        align-items: center;
+    }
 
+    .animated {
+        transition: all 0.3s ease-in-out 0.15s;
+    }
 
+    .animated:hover {
+        transform: translateY(-0.25rem) scale(1.10);
+    }
 
+    .dropdown-content {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 1);
+        color: whitesmoke;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.6);
+        z-index: 10;
+        border: 2px solid red;
+        border-radius: 8px;
+    }
 
+    .dropbtn {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
 
+    /* footer */
+    .box {
+        width: 40vw;
+    }
 
+}
 
+/* For service page */
+@media (max-width: 768px) {
+    .servicecard {
+        height: auto;
+        width: 95vw;
+        border-radius: 8%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .servicecard {
+        height: auto;
+        width: 90vw;
+        border-radius: 5%;
+        margin-bottom: 15px;
+    }
+}
+
+.carousel-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    /* Center the carousel items */
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+.carousel-item {
+    flex: 0 0 auto;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.servicecard.animated {
+    animation: fadeIn 1s ease-in-out;
+}
+@media(width:320px){
+    .servicecard{
+        height: 72vh;
+        width: 80vw;
+        flex-wrap: wrap;
+        overflow: auto;
+    }
+}
