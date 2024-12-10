@@ -1,7 +1,8 @@
 {
-  "/Contactus/page": "app/Contactus/page.js",
-  "/Expertise/page": "app/Expertise/page.js",
-  "/Services/page": "app/Services/page.js",
+  "/page": "app/page.js",
   "/Aboutus/page": "app/Aboutus/page.js",
-  "/page": "app/page.js"
+  "/Services/page": "app/Services/page.js",
+  "/Expertise/page": "app/Expertise/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/Contactus/page": "app/Contactus/page.js"
 }

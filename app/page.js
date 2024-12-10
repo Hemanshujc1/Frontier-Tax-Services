@@ -7,13 +7,13 @@ export default function Home() {
       <section className="section-1 relative h-screen flex flex-col items-center justify-center">
         <div className="video-container absolute inset-0 overflow-hidden">
           <video
-            className="min-w-full min-h-full w-auto h-auto absolute opacity-15 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover"
+            className="min-w-full min-h-full w-auto h-auto absolute opacity-[0.5] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover"
             autoPlay
             muted
             playsInline
             loop
           >
-            <source src="/video1.mp4" type="video/mp4" />
+            <source src="/homepagevideo.mp4" type="video/mp4" />
             Unable to load the background
           </video>
         </div>
@@ -34,7 +34,7 @@ export default function Home() {
           <div className="service service1">
             <Image src="/generalaccounting.gif" alt="general accounting" width={60} height={50} unoptimized />
             <div className="service-desc">
-              <Link href="/Service">
+              <Link href="/Services">
                 <h1>General Accounting</h1>
               </Link>
               <p>
@@ -46,7 +46,7 @@ export default function Home() {
           <div className="service service2">
             <Image src="/accountpayable.gif" alt="accounts payable" width={60} height={50} unoptimized />
             <div className="service-desc">
-              <Link href="/Service">
+              <Link href="/Services">
                 <h1>Accounts Payable</h1>
               </Link>
               <p>
@@ -58,7 +58,7 @@ export default function Home() {
           <div className="service service3">
             <Image src="/accountsreceivable.gif" alt="accounts receivable" width={60} height={50} unoptimized />
             <div className="service-desc">
-              <Link href="/Service">
+              <Link href="/Services">
                 <h1>Accounts Receivable</h1>
               </Link>
               <p>Customer set-up, Revenue Reconciliation, Cash allocation</p>
@@ -66,22 +66,10 @@ export default function Home() {
           </div>
         </div>
         <div className="box2 flex justify-center gap-5">
-          {/* <div className="service service4">
-            <Image src="/report.gif" alt="financial reporting" width={60} height={50} unoptimized />
-            <div className="service-desc">
-              <Link href="/Service">
-                <h1>Financial Reporting</h1>
-              </Link>
-              <p>
-                Management accounts, Commentary Analysis, Decision and planning
-                support
-              </p>
-            </div>
-          </div> */}
           <div className="service service5">
             <Image src="/tax.gif" alt="tax preparation" width={60} height={50} unoptimized />
             <div className="service-desc">
-              <Link href="/Service">
+              <Link href="/Services">
                 <h1>Tax Preparation</h1>
               </Link>
               <p>
@@ -93,7 +81,7 @@ export default function Home() {
           <div className="service service6">
             <Image src="/payroll.gif" alt="payroll" width={60} height={50} unoptimized />
             <div className="service-desc">
-              <Link href="/Service">
+              <Link href="/Services">
                 <h1>Payroll</h1>
               </Link>
               <p>
@@ -107,7 +95,7 @@ export default function Home() {
       <div className="bg-white opacity-15 h-1"></div>
       <section className="section3 h-[80vh]">
         <div className="heading2">
-          <h2 className="text-center m-11 font-bold text-xl">
+          <h2 className="text-center text-[#1b3462] m-11 font-bold text-2xl">
             Five pillars that epitomize our Unparalleled Work Approach
           </h2>
         </div>

@@ -2,6 +2,10 @@
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./app/Contactus/Contactus.css ***!
   \*************************************************************************************************************************************************************************************************************************************************************************/
 /* contact page */
+.section-2{
+    height: 90vh;
+    padding: 5px;
+}
 .contact-form {
     height: 92vh;
     width: 40vw;
@@ -62,10 +66,12 @@
     /* contact page */
     .section-2 {
         width: 97.95vw;
+        height: -moz-fit-content;
+        height: fit-content;
     }
 
     .contact-form {
-        height: 95vh;
+        height: 95%;
         width: 85vw;
         text-align: center;
     }
@@ -89,3 +95,39 @@
         flex-wrap: wrap;
     }
 }
+
+@media (width: 1024px) {    
+    .section-2 {
+        width: 97.95vw;
+        height: -moz-fit-content;
+        height: fit-content;
+    }
+
+    .contact-form {
+        height: 95%;
+        width: 95%;
+        text-align: center;
+    }
+
+    .contact-form input {
+        width: 80%;
+        flex-wrap: wrap;
+        font-size: small;
+    }
+
+    #Message {
+        height: 25vh;
+        width: 80%;
+        font-size: small;
+    }
+
+    .contact-form .submit input {
+        width: 15vw;
+        height: 4vh;
+        padding: 1px;
+        margin-bottom: 5px;
+        flex-wrap: wrap;
+    }
+
+}
+

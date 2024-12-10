@@ -1,61 +1,9 @@
 "use client";
-import React, { useState } from "react";
-import { useInView } from "react-intersection-observer";
-import CountUp from "react-countup";
+import React from "react";
 import Image from "next/image";
 import "./Aboutus.css";
-
-const AnimatedNumber = ({ end, duration, suffix }) => {
-  const [startAnimation, setStartAnimation] = useState(false);
-  const { ref, inView } = useInView({
-    triggerOnce: true, // Trigger animation only once
-    threshold: 0.5, // When 50% of the element is in view
-  });
-
-  // Update animation state when the element comes into view
-  if (inView && !startAnimation) {
-    setStartAnimation(true);
-  }
-
-  return (
-    <div ref={ref} className="counter">
-      <h3>
-        <CountUp
-          end={end}
-          duration={duration}
-          suffix={suffix}
-          start={startAnimation ? null : 0}
-        />
-      </h3>
-    </div>
-  );
-};
-
-const MyComponent = () => {
-  return (
-    <div className="slide h-[30vh] flex gap-20 justify-center items-center text-center font-bold text-[#1b3462]">
-      <div className="slide1">
-        <h2>Increased Savings</h2>
-        <AnimatedNumber end={70} duration={2} suffix={"%"} />
-      </div>
-      <div className="bg-white sep h-28 w-0.5"></div>
-      <div className="slide2">
-        <h2>Accounting Firms</h2>
-        <AnimatedNumber end={13} duration={2} suffix={"+"} />
-      </div>
-      <div className="bg-white sep h-28 w-0.5"></div>
-      <div className="slide3">
-        <h2>Employees</h2>
-        <AnimatedNumber end={5} duration={2} suffix={"+"} />
-      </div>
-      <div className="bg-white sep h-28 w-0.5"></div>
-      <div className="slide4">
-        <h2>Years of Experience</h2>
-        <AnimatedNumber end={3} duration={2} suffix={"+"} />
-      </div> 
-    </div>
-  );
-};
+import TeamCarousel from "@/components/TeamCarousel/TeamCarousel";
+import MyComponent from "@/components/MyComponent/MyComponent";
 
 const Page = () => {
   return (
@@ -85,18 +33,18 @@ const Page = () => {
         </div>
       </section>
       <div className="bg-white opacity-15 h-1"></div>
-      <div className="experience">
+      <div className="experience h-auto">
         <MyComponent />
       </div>
       <div className="bg-white opacity-15 h-1"></div>
-      <div className="newbox h-[80vh] flex justify-center items-center">
+      <div className="newbox h-auto p-5 flex justify-center items-center">
         <div className="howcanhelpyou w-[90vw] flex justify-center align-center items-center gap-6">
           <div className="heading">
-            <h1 className="text-center text-3xl font-bold text-[#1b3462]">
+            <h1 className="text-center text-2xl font-bold text-[#1b3462]">
               How we can help you get ahead ?
             </h1>
           </div>
-          <div className="txt flex flex-col justify-center align-middle">
+          <div className="txt flex flex-col">
             <p>
               Great outsourcing is all about escalating the counter accounting
               firm to excel in every aspect, from increasing the profit margin
@@ -115,7 +63,7 @@ const Page = () => {
               with a profitable margin?”
             </p>
             <p className="p-2">By partnering with us, you can observe:</p>
-            <ul className="text-[#3c7920]">
+            <ul className="text-[#1b3462]">
               <li>-Best accounting and bookkeeping practices</li>
               <li>-High operational efficiency</li>
               <li>-Enhance client’s deliverables</li>
@@ -127,24 +75,27 @@ const Page = () => {
         </div>
       </div>
       <div className="bg-white opacity-15 h-1"></div>
-      <div className="our-team h-[150vh] flex flex-col items-center">
-        <h2 className="text-center text-4xl font-bold mt-8 text-[#1b3462]">Our Team</h2>
-        {/* <TeamCarousel /> */}
-        <div className="team flex flex-wrap items-center justify-center gap-8 mb-10 mt-10 h-[90vh] w-[80vw]">
+      <div className="our-team h-auto flex flex-col items-center">
+        <h2 className="text-center text-2xl font-bold mt-5 text-[#1b3462]">
+          Our Team
+        </h2>
+        <div className="team flex flex-wrap items-center justify-center gap-8 mb-10 mt-5">
           <div className="teamcard MEMBER-1">
             <Image
               src={"/person1.jpg"}
               alt={"Arpit pic"}
-              className="w-81 h-40 rounded-[10px] mb-2 mt-0"
-              width={220}
-              height={220}
+              className="w-38 h-40 rounded-[10px] mb-2 mt-0"
+              width={190}
+              height={180}
             />
 
             <div className="name text-center">
               <h3 className="font-bold">Arpit Choudhary</h3>
               <h4>Director</h4>
               <p>
-              Experienced in taxation, compliance, and business strategy, providing visionary leadership to drive growth, seamless solutions, and client-focused success.
+                Experienced in taxation, compliance, and business strategy,
+                providing visionary leadership to drive growth, seamless
+                solutions, and client-focused success.
               </p>
               {/* <Image src="/staticgmail.png" alt="gmail gif" width={40} height={40}/> */}
             </div>
@@ -153,15 +104,18 @@ const Page = () => {
             <Image
               src={"/person2.jpg"}
               alt={"Riddhi pic"}
-              className="w-81 h-40 rounded-[10px] mb-2 mt-0"
-              width={220}
-              height={220}
+              className="w-38 h-40 rounded-[10px] mb-2 mt-0"
+              width={190}
+              height={180}
             />
 
             <div className="name text-center">
               <h3 className="font-bold">Riddhi Choudhary</h3>
               <h4>Accounting Manager</h4>
-              <p>Skilled in accounting, financial analysis, and compliance, ensuring accurate reporting, efficient processes, and client-focused financial management solutions.
+              <p>
+                Skilled in accounting, financial analysis, and compliance,
+                ensuring accurate reporting, efficient processes, and
+                client-focused financial management solutions.
               </p>
               {/* <Image src="/staticgmail.png" alt="gmail gif" width={40} height={40}/> */}
             </div>
@@ -170,16 +124,18 @@ const Page = () => {
             <Image
               src={"/person3.jpg"}
               alt={"Vishnu Vardhan Ratnapuram pic"}
-              className="w-81 h-50 rounded-[10px] mb-2 mt-0"
-              width={220}
-              height={220}
+              className="w-38 h-40 rounded-[10px] mb-2 mt-0"
+              width={190}
+              height={180}
             />
 
             <div className="name text-center">
               <h3 className="font-bold">Vishnu Vardhan Ratnapuram </h3>
               <h4>Tax Manager</h4>
               <p>
-              Experienced in U.S. taxation, compliance, incorporation services, and regulations, delivering client-focused solutions with precision and expertise.
+                Experienced in U.S. taxation, compliance, incorporation
+                services, and regulations, delivering client-focused solutions
+                with precision and expertise.
               </p>
               {/* <Image src="/staticgmail.png" alt="gmail gif" width={40} height={40}/> */}
             </div>
@@ -188,129 +144,29 @@ const Page = () => {
             <Image
               src={"/Hemanshupic.jpeg"}
               alt={"Hemanshu pic"}
-              className="w-81 h-48 rounded-[10px] mb-2 mt-0"
-              width={220}
-              height={220}
+              className="w-38 h-40 rounded-[10px] mb-2 mt-0"
+              width={190}
+              height={180}
             />
 
             <div className="name text-center">
               <h3 className="font-bold">Hemanshu Choudhary</h3>
               <h4>IT Head</h4>
               <p>
-              Expert in IT solutions, web development, and system optimization, driving innovation, seamless operations, and scalable technology for business success.
+                Expert in IT solutions, web development, and system
+                optimization, driving innovation, seamless operations, and
+                scalable technology for business success.
               </p>
               {/* <Image src="/staticgmail.png" alt="gmail gif" width={40} height={40}/> */}
             </div>
           </div>
-          {/* <div className="teamcard MEMBER-5">
-            <Image
-              src={"/Hemanshupic.jpeg"}
-              alt={"Hemanshu pic"}
-              className="w-81 h-50 rounded-[10px] mb-2 mt-0"
-              width={220}
-              height={220}
-            />
-
-            <div className="name text-center">
-              <h3 className="font-bold">Hemanshu Choudhary | CTO </h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusantium possimus dignissimos quis reiciendis ipsa deleniti
-                dicta praesentium aut officiis repellat.
-              </p>
-              {/* <Image src="/staticgmail.png" alt="gmail gif" width={40} height={40}/> */}
-            {/* </div>
-          </div> */}
+        </div>
+        <div className="teamcarousel hidden">
+          <TeamCarousel />
         </div>
       </div>
     </div>
   );
 };
-
-// const TeamCarousel = () => {
-//   const [currentIndex, setCurrentIndex] = useState(0);
-//   const items = [
-//     {
-//       name: "Hemanshu Choudhary",
-//       title: "B.tech | Title",
-//       img: "/Hemanshupic.jpeg",
-//     },
-//     {
-//       name: "Hemanshu Choudhary",
-//       title: "B.tech | Title",
-//       img: "/Hemanshupic.jpeg",
-//     },
-//     {
-//       name: "Hemanshu Choudhary",
-//       title: "B.tech | Title",
-//       img: "/Hemanshupic.jpeg",
-//     },
-//     {
-//       name: "Hemanshu Choudhary",
-//       title: "B.tech | Title",
-//       img: "/Hemanshupic.jpeg",
-//     },
-//   ];
-//   const totalItems = items.length;
-
-//   const handleLeftClick = () => {
-//     setCurrentIndex((currentIndex - 1 + totalItems) % totalItems);
-//   };
-
-//   const handleRightClick = () => {
-//     setCurrentIndex((currentIndex + 1) % totalItems);
-//   };
-
-//   return (
-//     <div className="relative flex items-center justify-center w-full h-[80vh] perspective-1000">
-//       <button
-//         className="absolute left-2 text-3xl focus:outline-none"
-//         onClick={handleLeftClick}
-//       >
-//         ←
-//       </button>
-//       <div className="relative flex items-center justify-center w-4/5 h-full overflow-hidden">
-//         <div
-//           className="carousel relative flex items-center justify-center w-full h-full transition-transform duration-700"
-//           style={{
-//             transform: `rotateY(${(currentIndex * -360) / totalItems}deg)`,
-//           }}
-//         >
-//           {items.map((item, index) => (
-//             <div
-//               key={index}
-//               className="carousel-item absolute teamcard shadow-md"
-//               style={{
-//                 transform: `rotateY(${
-//                   (index * 360) / totalItems
-//                 }deg) translateZ(250px)`,
-//               }}
-//             >
-//               <Image
-//                 src={item.img}
-//                 alt={item.name}
-//                 className="w-24 h-24 rounded-full mb-2"
-//                 width={96}
-//                 height={96}
-
-//               />
-//               <div className="text-center name">
-//                 <h3 className="font-bold">{item.name}</h3>
-//                 <h4 className="text-sm">{item.title}</h4>
-//                 <Image src="/staticgmail.png" alt="gmail gif" width={40} height={40} />
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//       <button
-//         className="absolute right-2 text-3xl focus:outline-none"
-//         onClick={handleRightClick}
-//       >
-//         →
-//       </button>
-//     </div>
-//   );
-// };
 
 export default Page;

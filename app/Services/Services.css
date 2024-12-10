@@ -1,3 +1,6 @@
+.servicebox .heading h1{
+  font-size: 48px ;
+}
 .para {
     max-height: 60vh;
     overflow: hidden;
@@ -6,4 +9,54 @@
 .para.expanded {
     max-height: 60vh;
 }
-  
+
+@media(max-width:1023px){
+  .servicebox{
+    overflow: hidden;
+  }
+  .servicebox .heading h1{
+    font-size: 25px;
+  }
+  .servicebox h2{
+    font-size: 16px;
+    padding: 1px;
+  }
+
+   .para p{
+    font-size: 14px;
+  }
+  .para{
+    height: fit-content;
+    overflow-y: auto;
+  }
+  .servicecards {
+    height: 90vh;
+    overflow-y: auto;
+    padding: 4px;
+  }
+  .serive_title, .serive_subtitle, .para{
+    width: 93vw;
+  }
+}
+@media(width:1024px){
+  .servicebox{
+    overflow: hidden;
+  }
+  .servicebox .heading h1{
+    font-size: 26px;
+  }
+  .servicebox h2{
+    font-size: 17px;
+    padding: 1px;
+  }
+  .servicebox p{
+    font-size: 15px;
+  }
+
+  .servicecards {
+    overflow-y: auto;
+  }
+  .serive_title, .serive_subtitle, .para{
+    width: 93vw;
+  }
+}

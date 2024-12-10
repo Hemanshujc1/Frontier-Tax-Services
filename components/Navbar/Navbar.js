@@ -72,7 +72,7 @@ const Navbar = () => {
       <div className="logo flex items-center gap-2">
         <Link href={"/"} className="text-2xl">
           Frontier Tax Services
-          <p>Precision in Every Calculation</p>
+          <p className="text-[17px]">Precision in Every Calculation</p>
         </Link>
       </div>
       <div className="mobile-menu-icon" onClick={toggleMobileMenu}>

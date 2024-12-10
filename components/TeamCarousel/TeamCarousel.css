@@ -1,0 +1,53 @@
+.teamcard1 {
+  height: auto;
+  width: fit-content;
+  background-color: #1b3462;
+  border: 2px solid whitesmoke;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.teamcard1 img {
+  border: 3px solid white;
+}
+.name1{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+.name1 h3 {
+  color: wheat;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.name1 h4 {
+  color: rgb(151, 108, 51);
+  font-size: 17px;
+  font-weight: bold;
+}
+.name1 p {
+  font-size: 16px;
+  color: whitesmoke;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.carousel {
+  transform-style: preserve-3d;
+}
+
+.carousel-item {
+  backface-visibility: hidden;
+}
+@media (max-width: 320px) {
+    .teamcard1{
+        height: auto;
+        padding: 5px;
+    }
+}
