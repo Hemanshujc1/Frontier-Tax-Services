@@ -1182,8 +1182,13 @@ h6 {
   font-style:normal;
 }
 
+p{
 
 
+  font-family: 'Open Sans', sans-serif;
+  /* font-size: 16px; */
+
+}
 
 
 
@@ -1195,7 +1200,8 @@ h6 {
   display: flex;
   width: 30vw;
   gap: 10px;
-  height: 30vh;
+  height: -moz-fit-content;
+  height: fit-content;
   /* background-color: #008080; */
   background-color: white;
   color: black;
@@ -1236,7 +1242,7 @@ h6 {
   .Features {
     flex-wrap: wrap;
     flex-direction: row;
-    height: 60vh;
+    height: auto2;
     width: 97.95vw;
     gap: 20px;
     overflow-y: auto;
@@ -1251,7 +1257,8 @@ h6 {
 
   .service {
     width: 90vw;
-    height: 38vh;
+    height: -moz-fit-content;
+    height: fit-content;
     display: flex;
     text-align: center;
     /* font-size: medium; */
@@ -1277,56 +1284,15 @@ h6 {
     overflow: auto;
     padding-bottom: 20px;
   }
-
-  
-   
-  .footer {
-    flex-direction: row;
-    padding: 14px;
-    height: 36vh;
-    font-size: small;
-    text-align: center;
-    flex-wrap: wrap;
-    overflow-y: auto;
-    /* margin-top: 20px; */
-  }
-
-  .footersection1 {
-    text-align: center;
-    gap: 5px;
-  }
-
-  .footersection1 h2 {
-    font-size: medium;
-  }
-
-  .footer .box {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 14px;
-  }
-
-  .footersection3 img {
-    height: 35px;
-    width: 35px;
-  }
+   .card{
+    height: -moz-fit-content;
+    height: fit-content;
+   }
 }
-
-@media (min-width: 1024px) {
-
-  /* footer */
-  .box {
-    width: 40vw;
-  }
-}
-
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
-
 @media (min-width: 640px) {
 
   .sm\:text-4xl {
@@ -1339,7 +1305,6 @@ h6 {
     line-height: 1.75rem;
   }
 }
-
 @media (min-width: 768px) {
 
   .md\:text-2xl {
@@ -1352,7 +1317,6 @@ h6 {
     line-height: 1;
   }
 }
-
 @media (min-width: 1024px) {
 
   .lg\:static {
@@ -1394,6 +1358,7 @@ h6 {
     line-height: 1;
   }
 }
+  
 
 /*!**************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./components/Footer/Footer.css ***!
@@ -1402,7 +1367,7 @@ h6 {
   .footer {
     flex-direction: row;
     padding: 14px;
-    height: 36vh;
+    height: auto;
     font-size: small;
     text-align: center;
     flex-wrap: wrap;

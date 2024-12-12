@@ -5,7 +5,7 @@ import AnimatedNumber from '../AnimatedNumber/AnimatedNumber';
 
 const MyComponent = () => {
     return (
-      <div className="slide h-[30vh] flex gap-20 justify-center items-center text-center font-bold text-[#1b3462]">
+      <div className="slide h-[30vh] flex gap-20 justify-center items-center text-center font-bold text-[#1b3462] text-xl">
         <div className="slide1">
           <h2>Increased Savings</h2>
           <AnimatedNumber end={70} duration={2} suffix={"%"} />

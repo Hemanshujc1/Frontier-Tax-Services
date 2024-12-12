@@ -29,10 +29,16 @@ export default function Home() {
         </div>
       </section>
       <div className="bg-white opacity-15 h-1"></div>
-      <section className="Features flex flex-wrap overflow-auto flex-col items-center justify-center gap-24 mb-10 mt-10 h-[80vh]">
+      <section className="Features flex flex-wrap overflow-auto flex-col items-center justify-center gap-24 mb-10 mt-10 h-auto">
         <div className="box1 flex justify-center gap-5">
           <div className="service service1">
-            <Image src="/generalaccounting.gif" alt="general accounting" width={60} height={50} unoptimized />
+            <Image
+              src="/generalaccounting.gif"
+              alt="general accounting"
+              width={60}
+              height={50}
+              unoptimized
+            />
             <div className="service-desc">
               <Link href="/Services">
                 <h1>General Accounting</h1>
@@ -44,7 +50,13 @@ export default function Home() {
             </div>
           </div>
           <div className="service service2">
-            <Image src="/accountpayable.gif" alt="accounts payable" width={60} height={50} unoptimized />
+            <Image
+              src="/accountpayable.gif"
+              alt="accounts payable"
+              width={60}
+              height={50}
+              unoptimized
+            />
             <div className="service-desc">
               <Link href="/Services">
                 <h1>Accounts Payable</h1>
@@ -56,7 +68,13 @@ export default function Home() {
             </div>
           </div>
           <div className="service service3">
-            <Image src="/accountsreceivable.gif" alt="accounts receivable" width={60} height={50} unoptimized />
+            <Image
+              src="/accountsreceivable.gif"
+              alt="accounts receivable"
+              width={60}
+              height={50}
+              unoptimized
+            />
             <div className="service-desc">
               <Link href="/Services">
                 <h1>Accounts Receivable</h1>
@@ -67,7 +85,13 @@ export default function Home() {
         </div>
         <div className="box2 flex justify-center gap-5">
           <div className="service service5">
-            <Image src="/tax.gif" alt="tax preparation" width={60} height={50} unoptimized />
+            <Image
+              src="/tax.gif"
+              alt="tax preparation"
+              width={60}
+              height={50}
+              unoptimized
+            />
             <div className="service-desc">
               <Link href="/Services">
                 <h1>Tax Preparation</h1>
@@ -79,7 +103,13 @@ export default function Home() {
             </div>
           </div>
           <div className="service service6">
-            <Image src="/payroll.gif" alt="payroll" width={60} height={50} unoptimized />
+            <Image
+              src="/payroll.gif"
+              alt="payroll"
+              width={60}
+              height={50}
+              unoptimized
+            />
             <div className="service-desc">
               <Link href="/Services">
                 <h1>Payroll</h1>
@@ -93,7 +123,7 @@ export default function Home() {
         </div>
       </section>
       <div className="bg-white opacity-15 h-1"></div>
-      <section className="section3 h-[80vh]">
+      <section className="section3 h-auto">
         <div className="heading2">
           <h2 className="text-center text-[#1b3462] m-11 font-bold text-2xl">
             Five pillars that epitomize our Unparalleled Work Approach
