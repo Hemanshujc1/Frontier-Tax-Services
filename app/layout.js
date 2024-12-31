@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { FaViacoin } from "react-icons/fa";
 
 const inter = Inter({ subsets: ["latin"] });  
 
