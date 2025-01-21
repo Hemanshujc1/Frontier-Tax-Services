@@ -5,12 +5,12 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="footer static bottom-0 w-full bg-gray-900 text-white flex justify-around font-bold h-[20vh] items-center">
+    <footer className="footer static bottom-0 w-full bg-white text-black flex justify-around font-bold h-[20vh] items-center">
       <div className="footersection1">
         <Link href="/">
-          <h2>Frontier Tax Services</h2>
+          <h1>Your Global Tax Buddy</h1>
         </Link>
-        <p>Precision in Every Calculation</p>
+        <h4>Precision in Every Calculation</h4>
       </div>
       <div className="box flex items-center justify-around">
         <div className="footersection2">
@@ -28,7 +28,7 @@ const Footer = () => {
           </div>
           <div className="h-0.5 w-55 bg-white seperate m-2"></div>
           <div className="txt">
-            <span className="p-[24px]"> &copy; Frontier Tax Services - All Rights Reserved</span>
+            <span className="p-[24px]"> &copy; Your Global Tax Buddy - All Rights Reserved</span>
           </div>
         </div>
         <div className="footersection3 socialmedia flex gap-2">

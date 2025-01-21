@@ -1,4 +1,4 @@
-// File: C:\Users\91702\OneDrive\Desktop\HEMANSHU\coding\webdev\Frontier Tax Services - Copy\Frontier Tax Services\app\Aboutus\page.js
+// File: /Users/hemanshu/Desktop/Hemanshu/coding/webdev/Frontier Tax Services - Copy/Frontier Tax Services/app/Aboutus/page.js
 import * as entry from '../../../../app/Aboutus/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

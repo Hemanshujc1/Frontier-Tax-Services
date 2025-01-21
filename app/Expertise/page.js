@@ -4,7 +4,7 @@ import "./Expertise.css";
 
 const page = () => {
   return (
-    <div>
+    <div className="bg-[#b4b4b4]">
       <section className="expertise h-[90vh] flex flex-col gap-16 p-5 mb-10 justify-center">
         <div className="heading text-center text-4xl font-bold">
           <h2>Who We Serve?</h2>

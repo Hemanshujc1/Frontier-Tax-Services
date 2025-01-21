@@ -68,10 +68,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-900 opacity-[0.9] navbar text-white flex justify-around font-bold h-20 items-center p-4 sticky top-0 z-50">
+    <nav className="bg-white opacity-[0.9] navbar text-black flex justify-around font-bold h-20 items-center p-4 sticky top-0 z-50">
       <div className="logo flex items-center gap-2">
         <Link href={"/"} className="text-2xl">
-          Frontier Tax Services
+            Your Global Tax Buddy
           <p className="text-[17px]">Precision in Every Calculation</p>
         </Link>
       </div>
@@ -92,7 +92,7 @@ const Navbar = () => {
         </svg>
       </div>
       <ul
-        className={`flex-col gap-5 lg:flex lg:flex-row lg:gap-5 lg:static fixed top-0 right-0 bg-gray-900 h-full transition-transform transform ${
+        className={`flex-col gap-5 lg:flex lg:flex-row lg:gap-5 lg:static fixed top-0 right-0 bg-white h-full transition-transform transform ${
           isMobileMenuOpen ? "translate-x-0 w-4/5" : "translate-x-full w-0"
         } lg:w-auto lg:transform-none lg:translate-x-0`}
       >

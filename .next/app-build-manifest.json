@@ -11,17 +11,11 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/Aboutus/page": [
+    "/Contactus/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/Aboutus/page.css",
-      "static/chunks/app/Aboutus/page.js"
-    ],
-    "/Services/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/Services/page.css",
-      "static/chunks/app/Services/page.js"
+      "static/css/app/Contactus/page.css",
+      "static/chunks/app/Contactus/page.js"
     ],
     "/Expertise/page": [
       "static/chunks/webpack.js",
@@ -29,11 +23,17 @@
       "static/css/app/Expertise/page.css",
       "static/chunks/app/Expertise/page.js"
     ],
-    "/Contactus/page": [
+    "/Services/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/Contactus/page.css",
-      "static/chunks/app/Contactus/page.js"
+      "static/css/app/Services/page.css",
+      "static/chunks/app/Services/page.js"
+    ],
+    "/Aboutus/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/Aboutus/page.css",
+      "static/chunks/app/Aboutus/page.js"
     ]
   }
 }

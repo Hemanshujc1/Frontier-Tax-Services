@@ -7,7 +7,7 @@ import MyComponent from "@/components/MyComponent/MyComponent";
 
 const Page = () => {
   return (
-    <div>
+    <div className="bg-[#ebe9e9] text-black">
       <section className="section-1 relative h-screen flex flex-col items-center justify-center">
         <div className="video-container absolute inset-0 overflow-hidden">
           <video
@@ -32,15 +32,13 @@ const Page = () => {
           </p>
         </div>
       </section>
-      <div className="bg-white opacity-15 h-1"></div>
       <div className="experience h-auto">
         <MyComponent />
       </div>
-      <div className="bg-white opacity-15 h-1"></div>
       <div className="newbox h-auto p-5 flex justify-center items-center">
         <div className="howcanhelpyou w-[90vw] flex justify-center align-center items-center gap-6">
           <div className="heading">
-            <h1 className="text-center text-2xl font-bold text-[#1b3462]">
+            <h1 className="text-center text-2xl font-bold">
               How we can help you get ahead ?
             </h1>
           </div>
@@ -62,7 +60,7 @@ const Page = () => {
               question:” How do we keep our clients’ deliverables up to date
               with a profitable margin?”
             </p>
-            <p className="p-2">By partnering with us, you can observe:</p>
+            <p className="pt-2">By partnering with us, you can observe:</p>
             <ul className="text-[#1b3462]">
               <li>-Best accounting and bookkeeping practices</li>
               <li>-High operational efficiency</li>
@@ -74,7 +72,6 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div className="bg-white opacity-15 h-1"></div>
       <div className="our-team h-auto flex flex-col items-center">
         <h2 className="text-center text-2xl font-bold mt-5 text-[#1b3462]">
           Our Team

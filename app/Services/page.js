@@ -40,7 +40,7 @@ const Page = () => {
             {/* Tax Preparation */}
             <div className="service1 flex gap-2 flex-col">
               <div
-                className="serive_title flex justify-between items-center rounded-sm w-[45vw] h-[5vh] bg-slate-900 text-[whitesmoke] font-bold p-5 cursor-pointer"
+                className="serive_title flex justify-between items-center rounded-sm w-[45vw] h-[5vh] font-bold p-5 cursor-pointer"
                 onClick={() => toggleService("taxPreparation")}
               >
                 <h2>Tax Preparation</h2>
@@ -50,14 +50,14 @@ const Page = () => {
                 <div className="allsubservices flex flex-col gap-2">
                   <div className="subservice subservice1">
                     <div
-                      className="serive_subtitle flex justify-between items-center rounded-sm w-[45vw] h-[5vh] bg-slate-900 text-[whitesmoke] font-bold p-5 cursor-pointer"
+                      className="serive_subtitle flex justify-between items-center rounded-sm w-[45vw] h-[5vh] font-bold p-5 cursor-pointer"
                       onClick={() => toggleSubservice("personalTax")}
                     >
                       <h2>Personal Tax</h2>
                       <FaChevronDown />
                     </div>
                     {expandedSubservice === "personalTax" && (
-                      <div className="para rounded-sm w-[45vw] bg-slate-900 text-white p-4">
+                      <div className="para rounded-sm w-[45vw] p-4">
                         <p>
                           We help individuals explore tax-saving opportunities
                           and provide solid tax strategies to increase their
@@ -76,14 +76,14 @@ const Page = () => {
                   {/* Similar structure for other subservices */}
                   <div className="subservice subservice2">
                     <div
-                      className="serive_subtitle flex justify-between items-center rounded-sm w-[45vw] h-[5vh] bg-slate-900 text-[whitesmoke] font-bold p-5 cursor-pointer"
+                      className="serive_subtitle flex justify-between items-center rounded-sm w-[45vw] h-[5vh] font-bold p-5 cursor-pointer"
                       onClick={() => toggleSubservice("BusinessTax")}
                     >
                       <h2>Business Tax</h2>
                       <FaChevronDown />
                     </div>
                     {expandedSubservice === "BusinessTax" && (
-                      <div className="para rounded-sm w-[45vw]  bg-slate-900 text-white p-4">
+                      <div className="para rounded-sm w-[45vw] p-4">
                         <p>
                           We are Experienced, well-prepared, and qualified team
                           of expert tax professionals and advisors helping
@@ -105,14 +105,14 @@ const Page = () => {
                   </div>
                   <div className="subservice subservice3">
                     <div
-                      className="serive_subtitle flex justify-between items-center rounded-sm w-[45vw] h-[5vh] bg-slate-900 text-[whitesmoke] font-bold p-5 cursor-pointer"
+                      className="serive_subtitle flex justify-between items-center rounded-sm w-[45vw] h-[5vh] font-bold p-5 cursor-pointer"
                       onClick={() => toggleSubservice("stateandlocalTax")}
                     >
                       <h2>State and Local Tax</h2>
                       <FaChevronDown />
                     </div>
                     {expandedSubservice === "stateandlocalTax" && (
-                      <div className="para rounded-sm w-[45vw] bg-slate-900 text-white p-4">
+                      <div className="para rounded-sm w-[45vw] p-4">
                         <p>
                           We provide individuals and businesses with
                           comprehensive state and local tax strategies that help
@@ -138,7 +138,7 @@ const Page = () => {
             {/* Pay Roll */}
             <div className="service2">
               <div
-                className="serive_title flex justify-between items-center rounded-sm w-[45vw] h-[5vh] bg-slate-900 text-[whitesmoke] font-bold p-5 cursor-pointer"
+                className="serive_title flex justify-between items-center rounded-sm w-[45vw] h-[5vh] font-bold p-5 cursor-pointer"
                 onClick={() => toggleService("Payroll")}
               >
                 <h2>Pay Roll</h2>
@@ -148,7 +148,7 @@ const Page = () => {
                 <div className="allsubservices">
                   <div className="subservice subservice1">
                     {expandedService === "Payroll" && (
-                      <div className="para rounded-sm w-[45vw] bg-slate-900 text-white p-4">
+                      <div className="para rounded-sm w-[45vw] p-4">
                         <p>
                           We offer comprehensive Accounting and Bookkeeping
                           Services tailored to meet the unique needs of your
@@ -173,7 +173,7 @@ const Page = () => {
             {/* General Accounting */}
             <div className="service3 flex flex-col gap-2">
               <div
-                className="serive_title flex justify-between items-center rounded-sm w-[45vw] h-[5vh] bg-slate-900 text-[whitesmoke] font-bold p-5 cursor-pointer"
+                className="serive_title flex justify-between items-center rounded-sm w-[45vw] h-[5vh] font-bold p-5 cursor-pointer"
                 onClick={() => toggleService("GeneralAccounting")}
               >
                 <h2>General Accounting</h2>
@@ -183,7 +183,7 @@ const Page = () => {
                 <div className="allsubservices">
                   <div className="subservice subservice1">
                     <div
-                      className="serive_subtitle flex justify-between items-center rounded-sm w-[45vw] h-[5vh] bg-slate-900 text-[whitesmoke] font-bold p-5 cursor-pointer"
+                      className="serive_subtitle flex justify-between items-center rounded-sm w-[45vw] h-[5vh]   font-bold p-5 cursor-pointer"
                       onClick={() =>
                         toggleSubservice("MonthlyAccountingServices")
                       }
@@ -192,7 +192,7 @@ const Page = () => {
                       <FaChevronDown />
                     </div>
                     {expandedSubservice === "MonthlyAccountingServices" && (
-                      <div className="para rounded-sm w-[45vw] bg-slate-900 text-white p-4">
+                      <div className="para rounded-sm w-[45vw] p-4">
                         <p>
                           We offer comprehensive Accounting and Bookkeeping
                           Services tailored to meet the unique needs of your

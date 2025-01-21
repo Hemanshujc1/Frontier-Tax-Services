@@ -28,9 +28,11 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <div className="bg-white opacity-15 h-1"></div>
-      <section className="Features flex flex-wrap overflow-auto flex-col items-center justify-center gap-24 mb-10 mt-10 h-auto">
-        <div className="box1 flex justify-center gap-5">
+      <h2 className="text-center text-[#1b3462] m-11 font-bold text-2xl">
+        Our Services
+          </h2>
+      <section className="Features flex flex-wrap overflow-auto flex-col items-center justify-center gap-14 mb-10 mt-10 h-auto">
+        <div className="box1 flex justify-center gap-3">
           <div className="service service1">
             <Image
               src="/generalaccounting.gif"
@@ -83,7 +85,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="box2 flex justify-center gap-5">
+        <div className="box2 flex justify-center gap-3">
           <div className="service service5">
             <Image
               src="/tax.gif"
@@ -122,7 +124,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="bg-white opacity-15 h-1"></div>
       <section className="section3 h-auto">
         <div className="heading2">
           <h2 className="text-center text-[#1b3462] m-11 font-bold text-2xl">

@@ -9,6 +9,10 @@
 .para.expanded {
     max-height: 60vh;
 }
+.serive_title, .serive_subtitle, .para{
+  background-color: black;
+  color: white;
+}
 
 @media(max-width:1023px){
   .servicebox{

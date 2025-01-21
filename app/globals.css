@@ -17,7 +17,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Playwrite GB S", cursive;
+  font-family: "Playwrite GB S";
   font-optical-sizing: auto;
   font-weight: 200;
   font-style:normal;
@@ -84,7 +84,7 @@ p{
     flex-direction: row;
     height: auto2;
     width: 97.95vw;
-    gap: 20px;
+    gap: 18px;
     overflow-y: auto;
     margin-top: 15px;
     margin-bottom: 15px;
