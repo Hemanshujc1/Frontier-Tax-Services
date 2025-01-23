@@ -7,7 +7,7 @@ import MyComponent from "@/components/MyComponent/MyComponent";
 
 const Page = () => {
   return (
-    <div className="bg-[#ebe9e9] text-black">
+    <div className="background text-black">
       <section className="section-1 relative h-screen flex flex-col items-center justify-center">
         <div className="video-container absolute inset-0 overflow-hidden">
           <video
@@ -60,8 +60,8 @@ const Page = () => {
               question:” How do we keep our clients’ deliverables up to date
               with a profitable margin?”
             </p>
-            <p className="pt-2">By partnering with us, you can observe:</p>
-            <ul className="text-[#1b3462]">
+            <p className="pt-2 pb-2">By partnering with us, you can observe:</p>
+            <ul>
               <li>-Best accounting and bookkeeping practices</li>
               <li>-High operational efficiency</li>
               <li>-Enhance client’s deliverables</li>
@@ -73,7 +73,7 @@ const Page = () => {
         </div>
       </div>
       <div className="our-team h-auto flex flex-col items-center">
-        <h2 className="text-center text-2xl font-bold mt-5 text-[#1b3462]">
+        <h2 className="text-center text-2xl font-bold mt-5">
           Our Team
         </h2>
         <div className="team flex flex-wrap items-center justify-center gap-8 mb-10 mt-5">

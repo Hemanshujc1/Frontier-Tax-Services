@@ -4,12 +4,12 @@ import "./Expertise.css";
 
 const page = () => {
   return (
-    <div className="bg-[#b4b4b4]">
-      <section className="expertise h-[90vh] flex flex-col gap-16 p-5 mb-10 justify-center">
+    <div className="background">
+      <section className="expertise h-auto flex flex-col gap-16 p-5 mb-10 justify-center">
         <div className="heading text-center text-4xl font-bold">
           <h2>Who We Serve?</h2>
         </div>
-        <div className="cards flex flex-wrap gap-2 h-[85vh] overflow-auto justify-center">
+        <div className="cards flex flex-wrap gap-4 pt-2 h-[85vh] overflow-auto justify-center">
           <div className="expertisecard">
             <Image src="/Real-Estate.gif" alt="Real-Estate gif" width={60} height={60} unoptimized />
             <h4 className="text-center w-[170px]">Real Estate Industries</h4>

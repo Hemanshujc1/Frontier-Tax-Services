@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { FaChevronDown } from "react-icons/fa";
 import "./Navbar.css";
-const Navbar = () => {
+function Navbar() {
   const expertiseDropdownRef = useRef(null);
   const servicesDropdownRef = useRef(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -28,19 +28,15 @@ const Navbar = () => {
     };
 
     const handleClickOutside = (event) => {
-      if (
-        expertiseDropdownRef.current &&
+      if (expertiseDropdownRef.current &&
         !expertiseDropdownRef.current.contains(event.target) &&
         servicesDropdownRef.current &&
         !servicesDropdownRef.current.contains(event.target) &&
-        !event.target.closest(".dropbtn")
-      ) {
+        !event.target.closest(".dropbtn")) {
         setActiveDropdown("");
       }
-      if (
-        event.target.closest(".mobile-menu-icon") === null &&
-        !event.target.closest("ul")
-      ) {
+      if (event.target.closest(".mobile-menu-icon") === null &&
+        !event.target.closest("ul")) {
         setIsMobileMenuOpen(false);
       }
     };
@@ -68,11 +64,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white opacity-[0.9] navbar text-black flex justify-around font-bold h-20 items-center p-4 sticky top-0 z-50">
-      <div className="logo flex items-center gap-2">
-        <Link href={"/"} className="text-2xl">
-            Your Global Tax Buddy
-          <p className="text-[17px]">Precision in Every Calculation</p>
+    <nav className="background opacity-[0.9] navbar text-black flex justify-around font-bold h-20 items-center p-4 sticky top-0 z-50">
+      <div className="logo flex animated">
+        <Link href={"/"}>
+          <span className="text-[22px] text-center"> Your Global Tax Buddy</span>
+          <p className="text-[12px] text-center">Precision in Every Calculation</p>
         </Link>
       </div>
       <div className="mobile-menu-icon" onClick={toggleMobileMenu}>
@@ -92,9 +88,7 @@ const Navbar = () => {
         </svg>
       </div>
       <ul
-        className={`flex-col gap-5 lg:flex lg:flex-row lg:gap-5 lg:static fixed top-0 right-0 bg-white h-full transition-transform transform ${
-          isMobileMenuOpen ? "translate-x-0 w-4/5" : "translate-x-full w-0"
-        } lg:w-auto lg:transform-none lg:translate-x-0`}
+        className={`flex-col gap-5 lg:flex lg:flex-row lg:gap-5 lg:static fixed top-0 right-0 h-full transition-transform transform ${isMobileMenuOpen ? "translate-x-0 w-4/5" : "translate-x-full w-0"} lg:w-auto lg:transform-none lg:translate-x-0`}
       >
         <li onClick={closeMobileMenu} className="animated">
           <Link href={"/"}> Home</Link>
@@ -109,8 +103,6 @@ const Navbar = () => {
         >
           <button
             className="dropbtn"
-            // onClick={() => toggleDropdown("services")}
-            // onClick={() => (window.location.href = "/Services" )}
           >
             <Link
               href={"/Services"}
@@ -122,8 +114,8 @@ const Navbar = () => {
           {activeDropdown === "services" && (
             <div ref={servicesDropdownRef} className="dropdown-content show">
               {/* <button onClick={closeMobileMenu}>
-                <Link href={"/Service"}>Financial Reporting</Link>
-              </button> */}
+                      <Link href={"/Service"}>Financial Reporting</Link>
+                    </button> */}
               <button onClick={closeMobileMenu}>
                 <Link href={"/Services"}>Tax Preparation</Link>
               </button>
@@ -134,11 +126,11 @@ const Navbar = () => {
                 <Link href={"/Services"}> General Accounting</Link>
               </button>
               {/* <button onClick={closeMobileMenu}>
-                <Link href={"/Service"}> Accounts Payable</Link>
-              </button>
-              <button onClick={closeMobileMenu}>
-                <Link href={"/Service"}> Accounts Receivable</Link>
-              </button> */}
+                      <Link href={"/Service"}> Accounts Payable</Link>
+                    </button>
+                    <button onClick={closeMobileMenu}>
+                      <Link href={"/Service"}> Accounts Receivable</Link>
+                    </button> */}
             </div>
           )}
         </li>
@@ -149,14 +141,12 @@ const Navbar = () => {
         >
           <button
             className="dropbtn"
-            // onClick={() => toggleDropdown("expertise")}
-            // onClick={() => (window.location.href = "/Expertise" )}
           >
             <Link
               href={"/Expertise"}
               className="flex align-middle justify-center items-center gap-1"
             >
-            Expertise <FaChevronDown />
+              Expertise <FaChevronDown />
             </Link>
           </button>
           {activeDropdown === "expertise" && (
@@ -194,6 +184,6 @@ const Navbar = () => {
       </ul>
     </nav>
   );
-};
+}
 
 export default Navbar;

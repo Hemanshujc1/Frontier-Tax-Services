@@ -59,7 +59,7 @@ const Page = () => {
           </h2>
       <div className="section-2 flex justify-center">
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="contact-form relative flex text-center flex-col align-middle justify-center items-center font-bold gap-6 bg-[blanchedalmond] rounded-[18px]">
+          <div className="contact-form relative flex text-center flex-col align-middle justify-center items-center font-bold gap-6 background rounded-[18px]">
             <h1 className="text-black text-xl ">Have a general question?</h1>
             <h2 className="text-[#628000] text-xl">
               Fill out this form to speak with a member of our team.

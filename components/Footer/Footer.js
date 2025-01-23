@@ -6,16 +6,16 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <footer className="footer static bottom-0 w-full bg-white text-black flex justify-around font-bold h-[20vh] items-center">
-      <div className="footersection1">
-        <Link href="/">
-          <h1>Your Global Tax Buddy</h1>
+      <div className="footersection1 animated">
+      <Link href={"/"}>
+          <span className="text-[22px] text-center"> Your Global Tax Buddy</span>
+          <p className="text-[12px] text-center">Precision in Every Calculation</p>
         </Link>
-        <h4>Precision in Every Calculation</h4>
       </div>
-      <div className="box flex items-center justify-around">
+      <div className="box flex items-center justify-center">
         <div className="footersection2">
           <div className="box0">
-            <ul className="flex gap-6 justify-center">
+            <ul className="flex gap-6 justify-center animated">
               <li>
                 <Link href="/Contactus">Contact</Link>
               </li>

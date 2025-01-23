@@ -1,7 +1,6 @@
 .expertisecard {
     /* background-color: teal; */
     background-color: White;
-    color: #12203a;
     height: 210px;
     width: 250px;
     display: flex;
@@ -11,10 +10,13 @@
     font-weight: bolder;
     font-size: x-large;
     gap: 45px;
-    border: 3px solid black;
+    border: 3px solid whitesmoke;
     border-radius: 12px;
+    box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.5);
 }
-
+.expertisecard:hover{
+    transform: translateY(-0.25rem) scale(1.02);
+}
 
 @media (max-width: 1023px) {
     

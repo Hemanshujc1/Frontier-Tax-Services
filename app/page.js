@@ -3,11 +3,11 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div>
+    <div className="background">
       <section className="section-1 relative h-screen flex flex-col items-center justify-center">
         <div className="video-container absolute inset-0 overflow-hidden">
           <video
-            className="min-w-full min-h-full w-auto h-auto absolute opacity-[0.5] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover"
+            className="min-w-full min-h-full w-auto h-auto absolute opacity-[0.55] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover"
             autoPlay
             muted
             playsInline
@@ -18,7 +18,7 @@ export default function Home() {
           </video>
         </div>
         <div className="text relative z-10 max-w-3xl text-center px-4">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-[#1b3462]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-[BLACK]">
             Assisting CPA Firms With Offshore Accounting Solutions
           </h2>
           <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-black">
@@ -28,11 +28,11 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <h2 className="text-center text-[#1b3462] m-11 font-bold text-2xl">
+      <h2 className="text-center m-11 font-bold text-2xl">
         Our Services
           </h2>
-      <section className="Features flex flex-wrap overflow-auto flex-col items-center justify-center gap-14 mb-10 mt-10 h-auto">
-        <div className="box1 flex justify-center gap-3">
+      <section className="Features flex flex-wrap overflow-auto flex-col items-center justify-center gap-14 mb-10 mt-10 h-[40vh]">
+        <div className="box1 flex justify-center gap-3.5">
           <div className="service service1">
             <Image
               src="/generalaccounting.gif"
@@ -85,7 +85,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="box2 flex justify-center gap-3">
+        <div className="box2 flex justify-center gap-3.5">
           <div className="service service5">
             <Image
               src="/tax.gif"
@@ -126,11 +126,11 @@ export default function Home() {
       </section>
       <section className="section3 h-auto">
         <div className="heading2">
-          <h2 className="text-center text-[#1b3462] m-11 font-bold text-2xl">
+          <h2 className="text-center m-11 font-bold text-2xl">
             Five pillars that epitomize our Unparalleled Work Approach
           </h2>
         </div>
-        <div className="pillars flex justify-center gap-6 h-[60vh]">
+        <div className="pillars flex justify-center gap-6 h-[60vh] pt-4">
           <div className="card pillar1">
             <h3>Client-Centricity:</h3>
             <p>

@@ -18,7 +18,7 @@ const Page = () => {
   };
 
   return (
-    <>
+    <div className="background">
       <section className="section-1 relative h-[120 vh] flex flex-col items-center justify-center overflow-x-hidden">
         <div className="video-container absolute inset-0 overflow-hidden">
           <video
@@ -216,7 +216,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 export default Page;

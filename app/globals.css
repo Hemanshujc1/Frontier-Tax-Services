@@ -11,27 +11,18 @@
   font-style:normal;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Playwrite GB S";
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style:normal;
+
+.background{
+  background-color: #ebe9e9;
 }
-
-p{
-
-
-  font-family: 'Open Sans', sans-serif;
-  /* font-size: 16px; */
-
+.section-1 .text h2{
+  /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.759); */
+  text-shadow: 2px 2px whitesmoke;
 }
-
-
+.section-1 .text p{
+  /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.759); */
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.496);
+}
 
 
 
@@ -41,22 +32,25 @@ p{
   display: flex;
   width: 30vw;
   gap: 10px;
-  height: fit-content;
+  height: max-content;
   /* background-color: #008080; */
   background-color: white;
   color: black;
   border-radius: 12px;
-  border: 2px solid black;
+  border: 2px solid whitesmoke;
+  box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.5);
   text-align: center;
   align-items: center;
   padding: 15px;
 }
-
+.service:hover{
+  transform: translateY(-0.25rem) scale(1.02);
+}
 .card {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border: 2px solid black;
+  border: 2px solid whitesmoke;
   width: 250px;
   height: 300px;
   padding: 10px;
@@ -66,12 +60,15 @@ p{
   text-align: center;
   flex-wrap: wrap;
   overflow: auto;
+  box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.5);
+}
+.card:hover{
+transform: translateY(-0.25rem) scale(1.02);
 }
 .card h3,
 .service-desc h1 {
   font-weight: bolder;
   font-size: larger;
-  color: #12203a;
   text-align: center;
 }
 .pillars {

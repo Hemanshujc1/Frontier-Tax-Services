@@ -36,5 +36,12 @@
     .box {
         width: 40vw;
     }
+    .animated {
+      transition: all 0.3s ease-in-out 0.15s;
+  }
+
+  .animated:hover {
+      transform: translateY(-0.25rem) scale(1.1);
+  }
 
 }

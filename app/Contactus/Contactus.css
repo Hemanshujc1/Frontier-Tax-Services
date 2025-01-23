@@ -1,15 +1,17 @@
 /* contact page */
 .section-2{
-    height: 90vh;
+    height: auto;
     padding: 5px;
 }
 .contact-form {
     height: 92vh;
     width: 40vw;
+    box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 5%;
 }
 
 .contact-form input {
-    width: 22vw;
+    width: 25vw;
     height: 5vh;
     background-color: white;
     color: black;
@@ -18,7 +20,7 @@
 }
 
 #Message {
-    width: 22vw;
+    width: 25vw;
     height: 18vh;
     background-color: white;
     color: black;
@@ -29,7 +31,6 @@
 #Message::placeholder {
     color: black;
 }
-
 .contact-form input::placeholder {
     color: black;
 }
@@ -41,6 +42,10 @@
     border-radius: 12px;
     background-color: rgb(202, 173, 67);
     font-weight: bold;
+}
+.submit input:hover {
+    transform: translateY(-0.25rem) scale(1.01);
+
 }
 
 .error {
