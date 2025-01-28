@@ -64,11 +64,11 @@ function Navbar() {
   };
 
   return (
-    <nav className="background opacity-[0.9] navbar text-black flex justify-around font-bold h-20 items-center p-4 sticky top-0 z-50">
-      <div className="logo flex animated">
+    <nav className="bg-gray-200 opacity-[0.9] navbar text-black flex justify-around font-bold h-20 items-center p-4 sticky top-0 z-50">
+      <div className="logo flex animated text-center">
         <Link href={"/"}>
-          <span className="text-[22px] text-center"> Your Global Tax Buddy</span>
-          <p className="text-[12px] text-center">Precision in Every Calculation</p>
+          <span className="text-[22px]"> Your Global Tax Buddy</span>
+          <p className="text-[12px]">Precision in Every Calculation</p>
         </Link>
       </div>
       <div className="mobile-menu-icon" onClick={toggleMobileMenu}>

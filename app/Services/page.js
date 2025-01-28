@@ -2,221 +2,314 @@
 import React, { useState, useEffect } from "react";
 import "./Services.css";
 import { FaChevronDown } from "react-icons/fa";
+import Link from "next/link";
+import Head from "next/head";
+import { motion } from "framer-motion";
 
-const Page = () => {
-  const [expandedService, setExpandedService] = useState(null);
-  const [expandedSubservice, setExpandedSubservice] = useState(null);
-
-  const toggleService = (service) => {
-    setExpandedService(expandedService === service ? null : service);
-  };
-
-  const toggleSubservice = (subservice) => {
-    setExpandedSubservice(
-      expandedSubservice === subservice ? null : subservice
-    );
-  };
-
+export default function Services() {
   return (
-    <div className="background">
-      <section className="section-1 relative h-[120 vh] flex flex-col items-center justify-center overflow-x-hidden">
-        <div className="video-container absolute inset-0 overflow-hidden">
-          <video
-            className="min-w-full min-h-full w-auto h-auto absolute opacity-[0.6] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover"
-            autoPlay
-            muted
-            playsInline
-            loop
+    <div className="bg-gray-50 text-gray-800">
+      <Head>
+        <title>Services - Your One-Stop Accounting Solution</title>
+        <meta
+          name="description"
+          content="Explore our range of CPA and accounting services."
+        />
+      </Head>
+
+      {/* Hero Section */}
+
+      <section className="bg-black text-white py-16 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="container mx-auto px-4"
+        >
+          <h1 className="text-4xl font-bold mb-4">
+            Your One-Stop Solution for Accounting and Tax Services
+          </h1>
+          <p className="text-lg mb-6">
+            Expertly managing your finances so you can focus on growth. Explore
+            our comprehensive range of services designed to meet your unique
+            needs.
+          </p>
+          <Link href="/Contactus">
+          <button className="buttons py-1 px-6">
+          Get Started Now
+          </button>
+          </Link>
+        </motion.div>
+      </section>
+      <div className="w-screen bg-white p-1"></div>
+
+      {/* Services Section */}
+      <section id="services1" className="py-16 ">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-12 sectionheading"
           >
-            <source src="/video1.mp4" type="video/mp4" />
-            Unable to load the background
-          </video>
-        </div>
-        <div className="relative servicebox z-10 px-4 flex flex-col justify-center items-center align-middle overflow-y-clip">
-          <div className="heading py-10 text-center">
-            <h1>What Services We Offer ?</h1>
-          </div>
-          <div className="h-[85vh] servicecards flex flex-col overflow-y-clip align-center items-center gap-7">
-            {/* Tax Preparation */}
-            <div className="service1 flex gap-2 flex-col">
-              <div
-                className="serive_title flex justify-between items-center rounded-sm w-[45vw] h-[5vh] font-bold p-5 cursor-pointer"
-                onClick={() => toggleService("taxPreparation")}
-              >
-                <h2>Tax Preparation</h2>
-                <FaChevronDown /> 
-              </div>
-              {expandedService === "taxPreparation" && (
-                <div className="allsubservices flex flex-col gap-2">
-                  <div className="subservice subservice1">
-                    <div
-                      className="serive_subtitle flex justify-between items-center rounded-sm w-[45vw] h-[5vh] font-bold p-5 cursor-pointer"
-                      onClick={() => toggleSubservice("personalTax")}
-                    >
-                      <h2>Personal Tax</h2>
-                      <FaChevronDown />
-                    </div>
-                    {expandedSubservice === "personalTax" && (
-                      <div className="para rounded-sm w-[45vw] p-4">
-                        <p>
-                          We help individuals explore tax-saving opportunities
-                          and provide solid tax strategies to increase their
-                          scalability and growth. By evaluating the tax
-                          consequences of business and personal decisions, we
-                          provide integrated guidance to manage and retain
-                          hard-earned wealth. Our team of experienced and
-                          skilled tax professionals leads individuals through
-                          the complexity of taxes with confidence and works
-                          closely to get tax-related tasks accomplished
-                          accurately, efficiently, and on time.
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                  {/* Similar structure for other subservices */}
-                  <div className="subservice subservice2">
-                    <div
-                      className="serive_subtitle flex justify-between items-center rounded-sm w-[45vw] h-[5vh] font-bold p-5 cursor-pointer"
-                      onClick={() => toggleSubservice("BusinessTax")}
-                    >
-                      <h2>Business Tax</h2>
-                      <FaChevronDown />
-                    </div>
-                    {expandedSubservice === "BusinessTax" && (
-                      <div className="para rounded-sm w-[45vw] p-4">
-                        <p>
-                          We are Experienced, well-prepared, and qualified team
-                          of expert tax professionals and advisors helping
-                          businesses with the tax services they need for every
-                          aspect of their financial and tax situation. Our tax
-                          advisors ensure every business receives tax assistance
-                          aligned with their business goals and requirements. We
-                          help busy business owners with their taxes and assist
-                          with consulting, compliance, tax preparation, and tax
-                          filing to help them lower taxable income, optimize tax
-                          credits, reduce the tax rate, and strategize tax
-                          payments. We serve companies across multiple
-                          industries, such as real estate, healthcare,
-                          technology, nonprofit organizations, and many more,
-                          with professional business tax services.
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                  <div className="subservice subservice3">
-                    <div
-                      className="serive_subtitle flex justify-between items-center rounded-sm w-[45vw] h-[5vh] font-bold p-5 cursor-pointer"
-                      onClick={() => toggleSubservice("stateandlocalTax")}
-                    >
-                      <h2>State and Local Tax</h2>
-                      <FaChevronDown />
-                    </div>
-                    {expandedSubservice === "stateandlocalTax" && (
-                      <div className="para rounded-sm w-[45vw] p-4">
-                        <p>
-                          We provide individuals and businesses with
-                          comprehensive state and local tax strategies that help
-                          lower tax rates, minimize compliance risk and tax
-                          burden, and ensure compliance with all the different
-                          regulations. Our dedicated state and local tax
-                          (SALT)professionals help businesses identify
-                          opportunities for tax savings, manage state and local
-                          tax burdens, stay up to date on evolving tax laws and
-                          rules, and provide tailored and accurate solutions to
-                          meet every business need. We offer customized SALT
-                          services to handle unique SALT challenges faced by
-                          businesses and recommend accurate and favorable tax
-                          solutions to help businesses meet their objectives.
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              )}
-            </div>
+            Our Services
+          </motion.h2>
 
-            {/* Pay Roll */}
-            <div className="service2">
-              <div
-                className="serive_title flex justify-between items-center rounded-sm w-[45vw] h-[5vh] font-bold p-5 cursor-pointer"
-                onClick={() => toggleService("Payroll")}
-              >
-                <h2>Pay Roll</h2>
-                <FaChevronDown />
-              </div>
-              {expandedService === "Payroll" && (
-                <div className="allsubservices">
-                  <div className="subservice subservice1">
-                    {expandedService === "Payroll" && (
-                      <div className="para rounded-sm w-[45vw] p-4">
-                        <p>
-                          We offer comprehensive Accounting and Bookkeeping
-                          Services tailored to meet the unique needs of your
-                          business. Our dedicated team ensures accurate
-                          financial records, timely reporting, and adherence to
-                          regulatory standards. From day-to-day transaction
-                          recording to financial statement preparation, we
-                          handle it all with precision and professionalism.
-                          Trust us to streamline your financial processes,
-                          providing you with the insights needed to make
-                          informed decisions and drive business growth. Let us
-                          take care of your accounting needs, so you can focus
-                          on what you do best – running your business.
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              )}
-            </div>
-
+          {/* Service Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* General Accounting */}
-            <div className="service3 flex flex-col gap-2">
-              <div
-                className="serive_title flex justify-between items-center rounded-sm w-[45vw] h-[5vh] font-bold p-5 cursor-pointer"
-                onClick={() => toggleService("GeneralAccounting")}
+            <div className="transition-transform transform hover:scale-105">
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="cards"
               >
-                <h2>General Accounting</h2>
-                <FaChevronDown />
-              </div>
-              {expandedService === "GeneralAccounting" && (
-                <div className="allsubservices">
-                  <div className="subservice subservice1">
-                    <div
-                      className="serive_subtitle flex justify-between items-center rounded-sm w-[45vw] h-[5vh]   font-bold p-5 cursor-pointer"
-                      onClick={() =>
-                        toggleSubservice("MonthlyAccountingServices")
-                      }
-                    >
-                      <h2>Monthly Accounting Services</h2>
-                      <FaChevronDown />
-                    </div>
-                    {expandedSubservice === "MonthlyAccountingServices" && (
-                      <div className="para rounded-sm w-[45vw] p-4">
-                        <p>
-                          We offer comprehensive Accounting and Bookkeeping
-                          Services tailored to meet the unique needs of your
-                          business. Our dedicated team ensures accurate
-                          financial records, timely reporting, and adherence to
-                          regulatory standards. From day-to-day transaction
-                          recording to financial statement preparation, we
-                          handle it all with precision and professionalism.
-                          Trust us to streamline your financial processes,
-                          providing you with the insights needed to make
-                          informed decisions and drive business growth. Let us
-                          take care of your accounting needs, so you can focus
-                          on what you do best – running your business.
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              )}
+                <h3 className="cardsheading mb-2">
+                  General Accounting
+                </h3>
+                <p className="cardspara mb-4">
+                  Stay ahead of your financials with our comprehensive monthly
+                  accounting services. From tracking transactions to preparing
+                  accurate financial statements, we ensure your books are always
+                  in order.
+                </p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>Detailed Financial Reporting</li>
+                  <li>Bank Reconciliations</li>
+                  <li>General Ledger Management</li>
+                  <li>Budgeting & Forecasting</li>
+                </ul>
+              </motion.div>
+            </div>
+
+            {/* Accounts Payable */}
+            <div className="transition-transform transform hover:scale-105">
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="cards"
+              >
+                <h3 className="cardsheading mb-2">
+                  Accounts Payable
+                </h3>
+                <p className="cardspara mb-4">
+                  Reduce manual work and maintain strong vendor relationships
+                  with our efficient accounts payable services. We ensure
+                  accurate, timely payments and keep you compliant with
+                  financial obligations.
+                </p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>Invoice Processing & Verification</li>
+                  <li>Payment Scheduling & Execution</li>
+                  <li>Vendor Management</li>
+                  <li>Expense Tracking</li>
+                </ul>
+              </motion.div>
+            </div>
+            {/* Accounts Receivable */}
+            <div className="transition-transform transform hover:scale-105">
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="cards"
+              >
+                <h3 className="cardsheading mb-2">
+                  Accounts Receivable
+                </h3>
+                <p className="cardspara mb-4">
+                  Maximize revenue collection and maintain healthy cash flow
+                  with our accounts receivable services. We help you reduce
+                  payment delays and manage customer invoicing seamlessly.
+                </p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>Customer Invoice Management</li>
+                  <li>Payment Collection & Reconciliation</li>
+                  <li>Aging Reports & Analysis</li>
+                  <li>Credit Policy Monitoring</li>
+                </ul>
+              </motion.div>
+            </div>
+            {/* Tax Preparation */}
+            <div className="transition-transform transform hover:scale-105">
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="cards"
+              >
+                <h3 className="cardsheading mb-2">Tax Preparation</h3>
+                <p className="cardspara mb-4">
+                  Our tax preparation services simplify the complexities of tax
+                  filing, ensuring compliance and minimizing liabilities.
+                  Whether personal or business taxes, we’ve got you covered.
+                </p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>Personal Tax Preparation</li>
+                  <li>Business Tax Preparation</li>
+                  <li>State and Local Tax Compliance</li>
+                </ul>
+              </motion.div>
+            </div>
+            {/* Payroll Services */}
+            <div className="transition-transform transform hover:scale-105">
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="cards"
+              >
+                <h3 className="cardsheading mb-2">
+                  Payroll Services
+                </h3>
+                <p className="cardspara mb-4">
+                  Ensure timely, accurate payroll processing with our expert
+                  services. From calculations to tax filings, we handle it all,
+                  so you can focus on growing your team and business.
+                </p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>Payroll Tax Filing & Compliance</li>
+                  <li>Employee Payment Processing</li>
+                  <li>Direct Deposit & Pay Stub Generation</li>
+                  <li>Benefits and Deductions Management</li>
+                </ul>
+              </motion.div>
             </div>
           </div>
         </div>
       </section>
+      <div className="w-screen bg-white p-1"></div>
+
+      {/* Call to Action */}
+      <section className="bg-black text-white py-16 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="container mx-auto px-4"
+        >
+          <h2 className="text-3xl font-bold mb-4">
+            Ready to Take the Next Step?
+          </h2>
+          <p className="mb-6">
+            Let us handle your finances so you can focus on achieving your
+            goals. Contact us today to get started!
+          </p>
+          <Link
+            href="/Contactus"
+            className="buttons py-2 px-6"
+          >
+            <button>Request a Free Consultation</button>
+          </Link>
+        </motion.div>
+      </section>
+      <div className="w-screen bg-white p-1"></div>
+
+      <section id="our-process" className="py-16 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="sectionheading text-center mb-12"
+          >
+            Our Process: Simplifying Your Finances
+          </motion.h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+  {/* Step 1 */}
+  <div className="transition-transform transform hover:scale-105">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="cards min-h-[250px] flex flex-col justify-between"
+    >
+      <div>
+        <div className="text-blue-600 text-4xl font-bold mb-4">1</div>
+        <h3 className="cardsheading mb-2">Initial Consultation</h3>
+        <p className="cardspara">We begin by understanding your unique requirements and goals.</p>
+      </div>
+    </motion.div>
+  </div>
+  {/* Step 2 */}
+  <div className="transition-transform transform hover:scale-105">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="cards min-h-[250px] flex flex-col justify-between"
+    >
+      <div>
+        <div className="text-blue-600 text-4xl font-bold mb-4">2</div>
+        <h3 className="cardsheading mb-2">Custom Plan</h3>
+        <p className="cardspara">Develop tailored strategies.</p>
+      </div>
+    </motion.div>
+  </div>
+  {/* Step 3 */}
+  <div className="transition-transform transform hover:scale-105">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="cards min-h-[250px] flex flex-col justify-between"
+    >
+      <div>
+        <div className="text-blue-600 text-4xl font-bold mb-4">3</div>
+        <h3 className="cardsheading mb-2">Execution</h3>
+        <p className="cardspara">Handle accounting, taxes, etc.</p>
+      </div>
+    </motion.div>
+  </div>
+  {/* Step 4 */}
+  <div className="transition-transform transform hover:scale-105">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className=" cards min-h-[250px] flex flex-col justify-between"
+    >
+      <div>
+        <div className="text-blue-600 text-4xl font-bold mb-4">4</div>
+        <h3 className="cardsheading mb-2">Reporting</h3>
+        <p className="cardspara">Share detailed, transparent insights.</p>
+      </div>
+    </motion.div>
+  </div>
+  {/* Step 5 */}
+  <div className="transition-transform transform hover:scale-105">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="cards min-h-[250px] flex flex-col justify-between"
+    >
+      <div>
+        <div className="text-blue-600 text-4xl font-bold mb-4">5</div>
+        <h3 className="cardsheading mb-2">Ongoing Support</h3>
+        <p className="cardspara">Regular updates and guidance.</p>
+      </div>
+    </motion.div>
+  </div>
+</div>
+</div>
+</section>
+
     </div>
   );
-};
-export default Page;
+}

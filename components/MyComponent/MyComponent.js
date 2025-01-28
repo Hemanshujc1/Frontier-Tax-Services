@@ -18,7 +18,7 @@ const MyComponent = () => {
         <div className="bg-white sep h-28 w-0.5"></div>
         <div className="slide3">
           <h2>Employees</h2>
-          <AnimatedNumber end={5} duration={2} suffix={"+"} />
+          <AnimatedNumber end={10} duration={2} suffix={"+"} />
         </div>
         <div className="bg-white sep h-28 w-0.5"></div>
         <div className="slide4">

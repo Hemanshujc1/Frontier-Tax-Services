@@ -1,46 +1,119 @@
 import React from "react";
 import Image from "next/image";
 import "./Expertise.css";
+import Link from "next/link";
 
 const page = () => {
   return (
     <div className="background">
-      <section className="expertise h-auto flex flex-col gap-16 p-5 mb-10 justify-center">
-        <div className="heading text-center text-4xl font-bold">
-          <h2>Who We Serve?</h2>
+      <section className="bg-black text-white py-16 text-center">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Who We Serve?</h1>
+          <p className="text-lg mb-6">
+            With a deep understanding of accounting and financial management, we
+            provide tailored outsourced accounting solutions to CPAs, accounting
+            firms, and businesses. Our expertise spans across bookkeeping, tax
+            preparation, payroll, accounts management, and compliance, ensuring
+            accuracy, efficiency, and seamless financial operations. By
+            leveraging advanced technology and industry best practices, we help
+            you streamline processes, reduce costs, and focus on growth. Partner
+            with us for reliable, scalable, and expert-driven accounting
+            support.
+          </p>
+          <Link href="/Contactus">
+          <button className="buttons py-1 px-6">
+Contact Us
+          </button>
+          </Link>
         </div>
-        <div className="cards flex flex-wrap gap-4 pt-2 h-[85vh] overflow-auto justify-center">
-          <div className="expertisecard">
-            <Image src="/Real-Estate.gif" alt="Real-Estate gif" width={60} height={60} unoptimized />
-            <h4 className="text-center w-[170px]">Real Estate Industries</h4>
+      </section>
+      <div className="w-screen bg-white p-1"></div>
+
+
+      <section className="expertise h-[90vh] flex flex-col p-5 my-3 justify-center align-middle items-center overflow-y-auto">
+        <div>
+          <h2 className="sectionheading"> Industries We Serve </h2>
+        </div>
+        <div className="h-[95%] w-[98%] overflow-y-auto flex flex-wrap gap-4 p-4 my-3 justify-center align-middle items-center">
+          <div className="expertisecard cards">
+            <Image
+              src="/Real-Estate.gif"
+              alt="Real-Estate gif"
+              width={60}
+              height={60}
+              unoptimized
+            />
+            <h3 className="text-center cardsheading">Real Estate Industries</h3>
           </div>
-          <div className="expertisecard">
-            <Image src="/Hospitality.gif" alt="Hospitality gif" width={60} height={60} unoptimized />
-            <h4 className="text-center w-[170px]">Hospitality Industries</h4>
+          <div className="expertisecard cards">
+            <Image
+              src="/Hospitality.gif"
+              alt="Hospitality gif"
+              width={60}
+              height={60}
+              unoptimized
+            />
+            <h3 className="text-center cardsheading">Hospitality Industries</h3>
           </div>
-          <div className="expertisecard">
-            <Image src="/Healthcare.gif" alt="Healthcare gif" width={60} height={60} unoptimized />
-            <h4 className="text-center w-[170px]">Healthcare Industries</h4>
+          <div className="expertisecard cards">
+            <Image
+              src="/Healthcare.gif"
+              alt="Healthcare gif"
+              width={60}
+              height={60}
+              unoptimized
+            />
+            <h3 className="text-center cardsheading">Healthcare Industries</h3>
+          </div>  
+          <div className="expertisecard cards">
+            <Image
+              src="/Technology.gif"
+              alt="Technology gif"
+              width={60}
+              height={60}
+              unoptimized
+            />
+            <h3 className="text-center cardsheading">Technology Industries</h3>
           </div>
-          <div className="expertisecard">
-            <Image src="/Technology.gif" alt="Technology gif" width={60} height={60} unoptimized />
-            <h4 className="text-center w-[170px]">Technology Industries</h4>
+          <div className="expertisecard cards">
+            <Image
+              src="/Restaurants.gif"
+              alt="Restaurants gif"
+              width={60}
+              height={60}
+              unoptimized
+            />
+            <h3 className="text-center cardsheading">Restaurants Industries</h3>
           </div>
-          <div className="expertisecard">
-            <Image src="/Restaurants.gif" alt="Restaurants gif" width={60} height={60} unoptimized />
-            <h4 className="text-center w-[170px]">Restaurants Industries</h4>
+          <div className="expertisecard cards">
+            <Image
+              src="/Professional.gif"
+              alt="Professional gif"
+              width={60}
+              height={60}
+              unoptimized
+            />
+            <h3 className="text-center cardsheading">Professional Services</h3>
           </div>
-          <div className="expertisecard">
-            <Image src="/Professional.gif" alt="Professional gif" width={60} height={60} unoptimized />
-            <h4 className="text-center w-[170px]">Professional Services</h4>
+          <div className="expertisecard cards">
+            <Image
+              src="/entrepreneur.gif"
+              alt="Entrepreneur gif"
+              width={60}
+              height={60}
+              unoptimized
+            />
+            <h3 className="text-center cardsheading">Entrepreneur</h3>
           </div>
-          <div className="expertisecard">
-            <Image src="/entrepreneur.gif" alt="Entrepreneur gif" width={60} height={60} unoptimized />
-            <h4 className="text-center w-[170px]">Entrepreneur</h4>
-          </div>
-          <div className="expertisecard">
-            <Image src="/Construction.gif" alt="Construction gif" width={60} height={60} unoptimized />
-            <h4 className="text-center w-[170px]">Construction Industries</h4>
+          <div className="expertisecard cards">
+            <Image
+              src="/Construction.gif"
+              alt="Construction gif"
+              width={60}
+              height={60}
+              unoptimized
+            />
+            <h3 className="text-center cardsheading">Construction Industries</h3>
           </div>
         </div>
       </section>

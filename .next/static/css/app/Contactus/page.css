@@ -2,33 +2,42 @@
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./app/Contactus/Contactus.css ***!
   \*************************************************************************************************************************************************************************************************************************************************************************/
 /* contact page */
-.section-2{
-    height: auto;
-    padding: 5px;
-}
-.contact-form {
-    height: 92vh;
-    width: 40vw;
-    box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.5);
-    border-radius: 5%;
-}
-
-.contact-form input {
-    width: 25vw;
+.contact-form  input {
     height: 5vh;
     background-color: white;
     color: black;
-    border-radius: 4px;
+    border: 2px solid black;
+    border-radius: 60px;
     padding: 5px;
+    box-shadow: 8px 8px 10px 2px rgba(0, 0, 0, 0.5);
+}
+.contact-form .name input, .contactdetails input{
+    width: 22vw;
+    border-radius: 50px;
+}
+.contact-form .subject input{
+    width: 45vw;
+    border-radius: 60px;
 }
 
+.contact-form input::-moz-placeholder{
+    text-align: center;
+    color: black;
+}
+
+.contact-form input::placeholder{
+    text-align: center;
+    color: black;
+}
 #Message {
-    width: 25vw;
+    width: 45vw;
     height: 18vh;
     background-color: white;
     color: black;
-    padding: 5px;
-
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 8px 8px 10px 2px rgba(0, 0, 0, 0.5);
 }
 
 #Message::-moz-placeholder {
@@ -38,29 +47,26 @@
 #Message::placeholder {
     color: black;
 }
-.contact-form input::-moz-placeholder {
-    color: black;
-}
-.contact-form input::placeholder {
-    color: black;
-}
 
 .submit input {
     width: 12vw;
     height: 6vh;
     padding: 1px;
     border-radius: 12px;
-    background-color: rgb(202, 173, 67);
+    background-color: white;
+    color: blue;
     font-weight: bold;
 }
 .submit input:hover {
     transform: translateY(-0.25rem) scale(1.01);
+    --tw-bg-opacity: 1;
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity)) /* #f3f4f6 */;
 
 }
 
 .error {
     color: red;
-    font-size: x-small;
+    font-size: small;
 }
 
 
@@ -68,20 +74,9 @@
 @media (max-width: 1023px) {
     
     /* contact page */
-    .section-2 {
-        width: 97.95vw;
-        height: -moz-fit-content;
-        height: fit-content;
-    }
-
-    .contact-form {
-        height: 95%;
-        width: 85vw;
-        text-align: center;
-    }
 
     .contact-form input {
-        width: 70vw;
+        width: 95%;
         flex-wrap: wrap;
         font-size: small;
     }
@@ -101,20 +96,9 @@
 }
 
 @media (width: 1024px) {    
-    .section-2 {
-        width: 97.95vw;
-        height: -moz-fit-content;
-        height: fit-content;
-    }
-
-    .contact-form {
-        height: 95%;
-        width: 95%;
-        text-align: center;
-    }
 
     .contact-form input {
-        width: 80%;
+        width: 95%;
         flex-wrap: wrap;
         font-size: small;
     }
