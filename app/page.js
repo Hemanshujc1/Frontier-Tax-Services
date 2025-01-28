@@ -113,7 +113,7 @@ export default function Home() {
           </h2>
           <p className="text-center sectionpara text-[#1f2937]">
             We offer a comprehensive range of CPA and accounting consulting
-            services designed to meet your unique needs. Whether you're a
+            services designed to meet your unique needs. Whether you&apos;re a
             business, entrepreneur, or individual, we deliver customized
             solutions to help you thrive.
           </p>
