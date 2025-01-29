@@ -1,0 +1,16 @@
+@media (max-width: 1023px) {
+    /* About us page */
+    .slide {
+        height: 40vh;
+        width: 100vw;
+        flex-wrap: wrap;
+        font-size: larger;
+        overflow-y: auto;
+        gap: 20px;
+      }
+      .sep {
+        display: none;
+      }
+      
+    
+}

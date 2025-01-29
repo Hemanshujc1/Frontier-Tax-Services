@@ -62,16 +62,45 @@
 @media (max-width: 1023px) {
     
     /* contact page */
+  .contactpagecontainer{
+    flex-direction: column;
+  }
+  .contacttextarea{
+    width: 100vw;
+  }
+ .contacttextarea .text p{
+    font-size: 15px;
+    padding-top: 10px;
+  }
+  .socialmedia p{
+    font-size: 12px;
+  }
+  .sept{
+    height: 1vh;
+  }
+  .section-2 {
+    width: 100vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: auto;
 
-    .contact-form input {
-        width: 95%;
-        flex-wrap: wrap;
+  }
+    .contact-form .name input {
+        width: 40vw;
+        font-size: small;
+    }
+    .contact-form .contactdetails input {
+        width: 40vw;
+        font-size: small;
+    }
+    .contact-form .subject input {
+        width: 80vw;
         font-size: small;
     }
 
     #Message {
         height: 25vh;
-        width: 70vw;
+        width: 80vw;
         font-size: small;
     }
 
@@ -81,28 +110,4 @@
         margin-bottom: 5px;
         flex-wrap: wrap;
     }
-}
-
-@media (width: 1024px) {    
-
-    .contact-form input {
-        width: 95%;
-        flex-wrap: wrap;
-        font-size: small;
-    }
-
-    #Message {
-        height: 25vh;
-        width: 80%;
-        font-size: small;
-    }
-
-    .contact-form .submit input {
-        width: 15vw;
-        height: 4vh;
-        padding: 1px;
-        margin-bottom: 5px;
-        flex-wrap: wrap;
-    }
-
 }

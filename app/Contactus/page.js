@@ -5,6 +5,8 @@ import "./Contactus.css";
 import useWeb3Forms from "@web3forms/react";
 import Link from "next/link";
 import Image from "next/image";
+import Head from "next/head";
+
 
 const Page = () => {
   const {
@@ -41,17 +43,33 @@ const Page = () => {
 
   return (
     <>
-      <section className="relative h-screen flex flex-col overflow-hidden">
-        <div className="flex h-[100%]">
-          <div className="relative text-black w-[50%] text-center flex flex-col justify-center items-center gap-4 p-4">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
-              Contact Our Team
-            </h2>
-            <p className="sectionpara">
-            Get in touch with us today to discover tailored accounting solutions that fit your business needs. Our expert team is dedicated to providing accurate, reliable, and efficient services to help you streamline your financial processes. Let us support you in achieving your business goals with professional care and attention
-            </p>
-            <div className="socialmedia flex flex-col gap-6">
-              <Link href="mailto:arpit.alice@gmail.com" className="flex gap-3 align-middle items-center justify-center">
+    <Head>
+        <title>Best CPA & Accounting Services | Your Global Tax Buddy</title>
+        <meta name="description" content="Get in touch with our CPA firm for expert accounting and tax solutions. Whether you need tax planning, payroll management, or financial consulting, we’re here to help. Contact us today to schedule a consultation and take control of your finances." />
+        <meta name="keywords" content="CPA services, accounting firm, tax preparation, payroll, business accounting" />
+        <meta name="author" content="Your Global Tax Buddy" />
+      </Head>
+      <section className="relative h-screen flex flex-col overflow-x-hidden">
+        <div className="flex h-[100%] contactpagecontainer">
+          <div className="contacttextarea relative text-black w-[50%] text-center flex flex-col justify-center items-center gap-4 p-4">
+            <div className="text mt-3">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+                Contact Our Team
+              </h2>
+              <p className="sectionpara pt-4 mt-4">
+                Get in touch with us today to discover tailored accounting
+                solutions that fit your business needs. Our expert team is
+                dedicated to providing accurate, reliable, and efficient
+                services to help you streamline your financial processes. Let us
+                support you in achieving your business goals with professional
+                care and attention
+              </p>
+            </div>
+            <div className="socialmedia flex flex-col gap-4">
+              <Link
+                href="mailto:arpit.alice@gmail.com"
+                className="flex gap-3 align-middle items-center justify-center"
+              >
                 <Image
                   src="/gmail.gif"
                   alt="Gmail"
@@ -62,7 +80,10 @@ const Page = () => {
                 />
                 <p>arpit.alice@gmail.com</p>
               </Link>
-              <Link href="mailto:arpit.alice@gmail.com" className="flex gap-9 align-middle items-center justify-center">
+              <Link
+                href="mailto:arpit.alice@gmail.com"
+                className="flex gap-3 align-middle items-center justify-center"
+              >
                 <Image
                   src="/Call.gif"
                   alt="call"
@@ -75,7 +96,7 @@ const Page = () => {
               </Link>
             </div>
           </div>
-          <div className="h-screen bg-[red] p-1"></div>
+          <div className="sept h-screen bg-[red] p-1"></div>
 
           <div className="section-2 flex justify-center w-[50%] items-center bg-black">
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -190,7 +211,7 @@ const Page = () => {
               </div>
             </form>
           </div>
-          </div>
+        </div>
       </section>
     </>
   );

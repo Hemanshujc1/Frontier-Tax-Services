@@ -61,7 +61,7 @@ const TeamCarousel = () => {
             {items.map((item, index) => (
               <div
                 key={index}
-                className="carousel-item absolute teamcard1 shadow-md"
+                className="carousel-item absolute teamcard1 cards"
                 style={{
                   transform: `rotateY(${
                     (index * 360) / totalItems
@@ -76,9 +76,9 @@ const TeamCarousel = () => {
                   height={98}
                 />
                 <div className="text-center name1">
-                  <h3>{item.name}</h3>
-                  <h4>{item.title}</h4>
-                  <p>{item.desc}</p>
+                  <h3 className="cardsheading">{item.name}</h3>
+                  <h3 className="cardsheading">{item.title}</h3>
+                  <p className="cardspara">{item.desc}</p>
                 </div>
               </div>
             ))}

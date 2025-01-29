@@ -9,7 +9,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 21px;
 }
 @media (max-width: 1023px) {
     
@@ -18,5 +18,8 @@
         /* width: 97.95vw; */
         align-items: center;
         justify-content: center;
+    }
+    .expertise .sectionheading{
+        font-size: 24px;
     }
 }

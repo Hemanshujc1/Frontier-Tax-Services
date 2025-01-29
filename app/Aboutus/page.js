@@ -5,10 +5,18 @@ import "./Aboutus.css";
 import TeamCarousel from "@/components/TeamCarousel/TeamCarousel";
 import MyComponent from "@/components/MyComponent/MyComponent";
 import Link from "next/link";
+import Head from "next/head";
+
 
 const Page = () => {
   return (
     <div className="background">
+       <Head>
+        <title>Best CPA & Accounting Services | Your Global Tax Buddy</title>
+        <meta name="description" content="Learn about our CPA firm’s mission, values, and expertise. With years of experience in accounting, tax services, and financial consulting, we help businesses and individuals navigate complex financial landscapes. Discover our commitment to excellence and client success." />
+        <meta name="keywords" content="CPA services, accounting firm, tax preparation, payroll, business accounting" />
+        <meta name="author" content="Your Global Tax Buddy" />
+      </Head>
       <section className="section-1 relative h-screen flex flex-col items-center justify-center bg-slate-800">
         <div className="video-container absolute inset-0 overflow-hidden">
           <video
@@ -38,9 +46,7 @@ const Page = () => {
           </Link>
         </div>
       </section>
-      <div className="experience h-auto">
         <MyComponent />
-      </div>
       <div className="w-screen bg-white p-1"></div>
 
       <section class="py-20 relative">
@@ -116,7 +122,7 @@ const Page = () => {
       <div className="w-screen bg-white p-1"></div>
 
       <div className="howcanhelpyou flex flex-wrap gap-3 mx-auto px-6 lg:px-12 py-5 bg-black text-white justify-center items-center align-middle">
-        <div className="sectionhheading text-left">
+        <div className="text-left">
           <h2 className="text-left sectionheading">
             How we can help you get ahead ?
           </h2>

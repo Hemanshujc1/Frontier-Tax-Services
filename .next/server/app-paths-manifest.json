@@ -1,7 +1,8 @@
 {
-  "/Services/page": "app/Services/page.js",
-  "/Contactus/page": "app/Contactus/page.js",
-  "/Expertise/page": "app/Expertise/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/page": "app/page.js",
-  "/Aboutus/page": "app/Aboutus/page.js"
+  "/Aboutus/page": "app/Aboutus/page.js",
+  "/Services/page": "app/Services/page.js",
+  "/Expertise/page": "app/Expertise/page.js",
+  "/Contactus/page": "app/Contactus/page.js"
 }

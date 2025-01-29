@@ -6,15 +6,16 @@ import Link from "next/link";
 import Head from "next/head";
 import { motion } from "framer-motion";
 
+
 export default function Services() {
   return (
     <div className="bg-gray-50 text-gray-800">
+   
       <Head>
-        <title>Services - Your One-Stop Accounting Solution</title>
-        <meta
-          name="description"
-          content="Explore our range of CPA and accounting services."
-        />
+        <title>Best CPA & Accounting Services | Your Global Tax Buddy</title>
+        <meta name="description" content="Explore our professional CPA services, including tax preparation, payroll processing, bookkeeping, accounts payable, and financial consulting. We provide customized solutions to streamline your business finances and ensure compliance. Partner with us for expert accounting support." />
+        <meta name="keywords" content="CPA services, accounting firm, tax preparation, payroll, business accounting" />
+        <meta name="author" content="Your Global Tax Buddy" />
       </Head>
 
       {/* Hero Section */}
@@ -65,7 +66,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="cards"
+                className="cards servicecards"
               >
                 <h3 className="cardsheading mb-2">
                   General Accounting
@@ -92,7 +93,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="cards"
+                className="cards servicecards"
               >
                 <h3 className="cardsheading mb-2">
                   Accounts Payable
@@ -118,7 +119,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="cards"
+                className="cards servicecards"
               >
                 <h3 className="cardsheading mb-2">
                   Accounts Receivable
@@ -143,7 +144,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="cards"
+                className="cards servicecards"
               >
                 <h3 className="cardsheading mb-2">Tax Preparation</h3>
                 <p className="cardspara mb-4">
@@ -165,7 +166,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="cards"
+                className="cards servicecards"
               >
                 <h3 className="cardsheading mb-2">
                   Payroll Services
@@ -177,9 +178,7 @@ export default function Services() {
                 </p>
                 <ul className="list-disc pl-6 space-y-1">
                   <li>Payroll Tax Filing & Compliance</li>
-                  <li>Employee Payment Processing</li>
                   <li>Direct Deposit & Pay Stub Generation</li>
-                  <li>Benefits and Deductions Management</li>
                 </ul>
               </motion.div>
             </div>
@@ -225,7 +224,7 @@ export default function Services() {
           >
             Our Process: Simplifying Your Finances
           </motion.h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
   {/* Step 1 */}
   <div className="transition-transform transform hover:scale-105">
     <motion.div
@@ -233,7 +232,7 @@ export default function Services() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="cards min-h-[250px] flex flex-col justify-between"
+      className="cards processcard min-h-[250px] flex flex-col justify-between"
     >
       <div>
         <div className="text-blue-600 text-4xl font-bold mb-4">1</div>
@@ -249,7 +248,7 @@ export default function Services() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="cards min-h-[250px] flex flex-col justify-between"
+      className="cards processcard min-h-[250px] flex flex-col justify-between"
     >
       <div>
         <div className="text-blue-600 text-4xl font-bold mb-4">2</div>
@@ -265,7 +264,7 @@ export default function Services() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="cards min-h-[250px] flex flex-col justify-between"
+      className="cards processcard min-h-[250px] flex flex-col justify-between"
     >
       <div>
         <div className="text-blue-600 text-4xl font-bold mb-4">3</div>
@@ -281,7 +280,7 @@ export default function Services() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className=" cards min-h-[250px] flex flex-col justify-between"
+      className="cards processcard min-h-[250px] flex flex-col justify-between"
     >
       <div>
         <div className="text-blue-600 text-4xl font-bold mb-4">4</div>
@@ -297,7 +296,7 @@ export default function Services() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="cards min-h-[250px] flex flex-col justify-between"
+      className="cards processcard min-h-[250px] flex flex-col justify-between"
     >
       <div>
         <div className="text-blue-600 text-4xl font-bold mb-4">5</div>

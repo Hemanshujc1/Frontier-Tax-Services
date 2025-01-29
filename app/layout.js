@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Your Global Tax Buddy",
-  description: "Welcome to Frontier Tax Services, your trusted partner in tax solutions. Our expert team offers comprehensive tax preparation, planning, and advisory services tailored to individuals and businesses alike. Explore our reliable expertise in maximizing returns and minimizing liabilities. Contact us today to navigate your tax journey with confidence and clarity",
+  description: "Welcome to Your Global Tax Buddy, your trusted partner in tax solutions. Our expert team offers comprehensive tax preparation, planning, and advisory services tailored to individuals and businesses alike. Explore our reliable expertise in maximizing returns and minimizing liabilities. Contact us today to navigate your tax journey with confidence and clarity",
 };
 
 export default function RootLayout({ children }) {

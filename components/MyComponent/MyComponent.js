@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import AnimatedNumber from '../AnimatedNumber/AnimatedNumber';
+import "./MyComponent.css";
+
 
 
 const MyComponent = () => {

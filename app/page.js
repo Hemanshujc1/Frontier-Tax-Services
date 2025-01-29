@@ -1,9 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
+
+
 
 export default function Home() {
   return (
     <div className="background">
+       <Head>
+        <title>Best CPA & Accounting Services | Your Global Tax Buddy</title>
+        <meta name="description" content="Expert CPA and accounting services tailored for businesses and individuals. We specialize in tax preparation, payroll, bookkeeping, and financial consulting. Ensure compliance and maximize savings with our trusted solutions. Get started today!" />
+        <meta name="keywords" content="CPA services, accounting firm, tax preparation, payroll, business accounting" />
+        <meta name="author" content="Your Global Tax Buddy" />
+      </Head>
       <section className="section-1 relative h-screen flex flex-col items-center justify-center bg-slate-800">
         <div className="video-container absolute inset-0 overflow-hidden">
           <video
@@ -26,24 +35,24 @@ export default function Home() {
             consulting solutions for firms, businesses, and individuals.
           </p>
           <Link href="Contactus">
-            <button className="buttons px-4 py-1 m-3">
-              Get Started
-            </button>
+            <button className="buttons px-4 py-1 m-3">Get Started</button>
           </Link>
         </div>
       </section>
-      <section className="py-2 bg-slate-150 whychooseus">
+
+      <section className="py-1 bg-slate-150 whychooseus">
         <div className="relative">
           <svg
-            className="absolute top-0 left-0 w-full -translate-y-1"
+            className="absolute top-0 left-0 w-full h-[15vh]"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1440 120"
+            preserveAspectRatio="none"
           >
             <path fill="black" d="M0,96L1440,32L1440,0L0,0Z"></path>
           </svg>
 
-          <div className="container mx-auto px-6 lg:px-12 relative z-10">
-            <h2 className="sectionheading text-left text-white mb-12">
+          <div className="container mx-auto px-6 py-2 lg:px-12 relative z-10">
+            <h2 className="text-4xl font-bold text-left text-white mb-12">
               Why Choose Us?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -97,7 +106,7 @@ export default function Home() {
           </div>
 
           <svg
-            className="absolute bottom-0 left-0 w-full translate-y-3"
+            className="absolute bottom-0 left-0 w-full h-auto translate-y-4  "
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1440 120"
           >
@@ -106,11 +115,9 @@ export default function Home() {
         </div>
       </section>
       <div className="w-screen bg-white p-1"></div>
-      <section className="Features flex flex-wrap overflow-y-auto flex-col items-center justify-center gap-4 py-9 my-2 mx-auto px-6 lg:px-12">
+      <section className="Features flex flex-wrap overflow-y-auto overflow-x-hidden flex-col items-center justify-center gap-4 py-9 my-2 mx-auto px-6 lg:px-12">
         <div className="sectionintro flex flex-col gap-2 mb-10">
-          <h2 className="text-center sectionheading">
-            Our Services
-          </h2>
+          <h2 className="text-center sectionheading">Our Services</h2>
           <p className="text-center sectionpara text-[#1f2937]">
             We offer a comprehensive range of CPA and accounting consulting
             services designed to meet your unique needs. Whether you&apos;re a
@@ -121,61 +128,62 @@ export default function Home() {
         <div className="box1 flex justify-center gap-4">
           <div className="service cards">
             <div className="image">
-            <Image
-              src="/generalaccounting.gif"
-              alt="general accounting"
-              width={60}
-              height={50}
-              unoptimized
-            />
+              <Image
+                src="/generalaccounting.gif"
+                alt="general accounting"
+                width={60}
+                height={50}
+                unoptimized
+              />
             </div>
             <div className="service-desc">
               <Link href="/Services">
                 <h3 className="cardsheading">General Accounting</h3>
-              <p className="cardspara">
-                Bank reconciliations, Journal entry postings, Accruals and
-                prepayments
-              </p>
+                <p className="cardspara">
+                  Bank reconciliations, Journal entry postings, Accruals and
+                  prepayments
+                </p>
               </Link>
             </div>
           </div>
           <div className="service cards">
             <div className="image">
-            <Image
-              src="/accountpayable.gif"
-              alt="accounts payable"
-              width={60}
-              height={50}
-              unoptimized
-            />
+              <Image
+                src="/accountpayable.gif"
+                alt="accounts payable"
+                width={60}
+                height={50}
+                unoptimized
+              />
             </div>
             <div className="service-desc">
               <Link href="/Services">
                 <h3 className="cardsheading">Accounts Payable</h3>
-              <p className="cardspara">
-                Supplier set-up, Purchase order processing, Supplier statement
-                reconciliation
-              </p>
+                <p className="cardspara">
+                  Supplier set-up, Purchase order processing, Supplier statement
+                  reconciliation
+                </p>
               </Link>
             </div>
           </div>
           <div className="service cards">
             <div className="image">
-            <Image
-              src="/accountsreceivable.gif"
-              alt="accounts receivable"
-              width={60}
-              height={50}
-              unoptimized
-            />
+              <Image
+                src="/accountsreceivable.gif"
+                alt="accounts receivable"
+                width={60}
+                height={50}
+                unoptimized
+              />
             </div>
             <div className="service-desc">
               <Link href="/Services">
                 <h3 className="cardsheading">Accounts Receivable</h3>
-             
-              <p className="cardspara">
-              Customer Set-up, Revenue Reconciliation, Cash Allocation and Reporting
-              </p>
+
+                <p className="cardspara">
+                  Customer Set-up, Revenue Reconciliation, Cash Allocation and
+                  Reporting
+                </p>
               </Link>
             </div>
           </div>
@@ -183,43 +191,43 @@ export default function Home() {
         <div className="box2 flex justify-center gap-4">
           <div className="service cards">
             <div className="image">
-            <Image
-              src="/tax.gif"
-              alt="tax preparation"
-              width={60}
-              height={50}
-              unoptimized
-            />
+              <Image
+                src="/tax.gif"
+                alt="tax preparation"
+                width={60}
+                height={50}
+                unoptimized
+              />
             </div>
             <div className="service-desc">
               <Link href="/Services">
                 <h3 className="cardsheading">Tax Preparation</h3>
-             
-              <p className="cardspara">
-                Dedicated year-round tax advisory support for business and
-                individual returns
-              </p>
+
+                <p className="cardspara">
+                  Dedicated year-round tax advisory support for business and
+                  individual returns
+                </p>
               </Link>
             </div>
           </div>
           <div className="service cards">
             <div className="image">
-            <Image
-              src="/payroll.gif"
-              alt="payroll"
-              width={60}
-              height={50}
-              unoptimized
-            />
+              <Image
+                src="/payroll.gif"
+                alt="payroll"
+                width={60}
+                height={50}
+                unoptimized
+              />
             </div>
             <div className="service-desc">
               <Link href="/Services">
                 <h3 className="cardsheading">Payroll</h3>
-            
-              <p className="cardspara">
-                Customized payroll reports, Daily, weekly and Monthly statutory
-                deductions
-              </p>
+
+                <p className="cardspara">
+                  Customized payroll reports, Daily, weekly and Monthly
+                  statutory deductions
+                </p>
               </Link>
             </div>
           </div>
@@ -233,7 +241,9 @@ export default function Home() {
             Five pillars that epitomize our Unparalleled Work Approach
           </h2>
           <p className="sectionpara text-center p-3">
-          We deliver seamless accounting solutions with a commitment to excellence, ensuring accuracy, efficiency, and success for our clients.
+            We deliver seamless accounting solutions with a commitment to
+            excellence, ensuring accuracy, efficiency, and success for our
+            clients.
           </p>
         </div>
         <div className="pillars flex flex-wrap overflow-auto justify-center gap-6 h-[60vh] py-6 px-auto">
@@ -281,11 +291,9 @@ export default function Home() {
       </section>
       <div className="w-screen bg-white p-1"></div>
 
-      <section className="calltoaction bg-black text-white py-5 mx-auto px-6 lg:px-12">
+      <section className="calltoaction bg-black text-white py-5 mx-auto px-6 lg:px-12 overflow-x-hidden">
         <div className="flex flex-col items-center justify-center text-center gap-3">
-          <h2 className="sectionheading">
-            Ready to Transform Your Finances?
-          </h2>
+          <h2 className="sectionheading">Ready to Transform Your Finances?</h2>
           <h3 className="text-2xl">
             Let’s Build a Path to Your Financial Success Together
           </h3>
@@ -295,9 +303,7 @@ export default function Home() {
             Take the first step towards financial clarity and growth today.
           </p>
           <Link href="Contactus">
-            <button className="buttons py-1 px-2 m-1">
-              Contact Us Now
-            </button>
+            <button className="buttons py-1 px-2 m-1">Contact Us Now</button>
           </Link>
         </div>
       </section>

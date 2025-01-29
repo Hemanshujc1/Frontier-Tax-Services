@@ -2,10 +2,18 @@ import React from "react";
 import Image from "next/image";
 import "./Expertise.css";
 import Link from "next/link";
+import Head from "next/head";
+
 
 const page = () => {
   return (
     <div className="background">
+         <Head>
+        <title>Best CPA & Accounting Services | Your Global Tax Buddy</title>
+        <meta name="description" content="We provide specialized accounting and tax solutions for various industries, including healthcare, real estate, retail, and startups. Our CPA firm understands industry-specific challenges and offers tailored financial strategies to support your business growth." />
+        <meta name="keywords" content="CPA services, accounting firm, tax preparation, payroll, business accounting" />
+        <meta name="author" content="Your Global Tax Buddy" />
+      </Head>
       <section className="bg-black text-white py-16 text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-4">Who We Serve?</h1>
